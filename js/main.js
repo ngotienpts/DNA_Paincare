@@ -2,6 +2,9 @@ document.addEventListener("DOMContentLoaded", function () {
     // back top
     var backTop = document.querySelector("#back-top");
 
+    // language
+    var langContainer = document.querySelector(".js__languageContainer");
+
     const app = {
         // su ly cac su kien
         handleEvent: function () {
@@ -13,6 +16,29 @@ document.addEventListener("DOMContentLoaded", function () {
                     document.body.scrollTop = 0;
                     document.documentElement.scrollTop = 0;
                 };
+            }
+
+            // language
+            if (langContainer) {
+                var languageDefault = langContainer.querySelector(
+                    ".js__languageDefault"
+                );
+                var languageItems =
+                    langContainer.querySelectorAll(".js__languageItem");
+
+                languageDefault.onclick = function () {
+                    this.classList.toggle("active");
+                };
+
+                languageItems.forEach((languageItem) => {
+                    var children = languageDefault.querySelector(
+                        ".js__languageDefaultText"
+                    );
+                    languageItem.onclick = function () {
+                        children.innerHTML = languageItem.innerHTML;
+                        languageDefault.classList.remove("active");
+                    };
+                });
             }
         },
         // scroll top
