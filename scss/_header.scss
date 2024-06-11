@@ -107,6 +107,34 @@
             }
         }
     }
+
+    &-bot {
+        .logo {
+            img {
+                height: 70px;
+                width: auto !important;
+            }
+        }
+    }
+
+    &.sticky {
+        .header-bot {
+            position: fixed;
+            background-color: #fff;
+            left: 0;
+            right: 0;
+            top: 0;
+            z-index: 100;
+            width: 100%;
+            box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2),
+                0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+
+            .logo img {
+                height: 40px;
+                width: auto !important;
+            }
+        }
+    }
 }
 
 select {
@@ -124,7 +152,6 @@ select {
 
 .navbar {
     &-item {
-        font-weight: 500;
         position: relative;
 
         &:hover {
@@ -132,18 +159,45 @@ select {
                 display: block;
             }
         }
+
+        &:last-child {
+            .navbar-dropdown {
+                right: 0;
+                left: auto;
+            }
+        }
+
+        &--more {
+            padding-left: 24px;
+            border-left: 1px solid #e5e5e5;
+            position: relative;
+            &::before {
+                content: "";
+                position: absolute;
+                border-left: 5px solid transparent;
+                border-right: 5px solid transparent;
+                border-top: 5px solid #666666;
+                right: -15px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+    }
+
+    &-link {
+        font-weight: 500;
     }
 
     &-dropdown {
         position: absolute;
-        min-width: 150px;
+        min-width: 180px;
         background-color: #fff;
         box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2),
             0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
         top: calc(100% + 16px);
         left: 0;
         z-index: 20;
-        // display: none;
+        display: none;
 
         &::before {
             content: "";
@@ -157,17 +211,30 @@ select {
         }
 
         &__link {
-            padding: 5px 10px;
+            margin: 8px 10px;
+            padding-left: 14px;
             display: block;
+            color: #333;
+            font-weight: 400;
+            position: relative;
 
-            img {
-                width: 18px;
-                height: auto !important;
+            &::before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+                width: 2px;
+                height: 100%;
+                background-color: #d4d4d4;
             }
 
             &:hover {
-                color: #fff;
-                background-color: #69452b;
+                color: #0772b5;
+                font-weight: 500;
+                &::before {
+                    background-color: #73be44;
+                }
             }
         }
     }

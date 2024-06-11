@@ -1,0 +1,234 @@
+.heading-primary {
+    padding-left: 14px;
+    position: relative;
+    border-left: 4px solid #73be44;
+}
+.booking {
+    &-img {
+        width: 18px;
+        height: auto;
+    }
+}
+.arrow-primary {
+    .swiper-button-next,
+    .swiper-rtl .swiper-button-prev {
+        right: auto;
+        left: 60px;
+    }
+    .swiper-button-next,
+    .swiper-button-prev {
+        color: #0772b5;
+    }
+    .swiper-button-prev:after,
+    .swiper-rtl .swiper-button-next:after {
+        content: "\2190";
+    }
+    .swiper-button-next:after,
+    .swiper-rtl .swiper-button-prev:after {
+        content: "\2192";
+    }
+}
+.main-primary {
+    background-image: url("../images/bg_1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &__left {
+    }
+    &__right {
+        .bg {
+            width: auto;
+            height: 400px;
+        }
+    }
+}
+
+.main-secondary {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    &__content {
+        .article {
+            border: 1px solid #72be44;
+        }
+        .article-img {
+            .image-2 {
+                width: 77px;
+                height: auto;
+                right: -1px;
+                top: -1px;
+            }
+        }
+    }
+}
+
+.main-tertiary {
+    padding: 60px 80px;
+    background-color: #eff9ff;
+
+    &__top {
+        position: relative;
+        .left {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 50px 40px;
+            position: absolute;
+            width: 600px;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            z-index: 10;
+
+            &-button {
+                position: relative;
+                margin-bottom: 10px;
+                padding-top: 40px;
+            }
+        }
+        .right {
+            padding-left: 170px;
+        }
+    }
+
+    &__bot {
+        margin-top: 90px;
+        .article {
+            padding: 0 40px;
+        }
+        .article-img {
+            img {
+                margin: auto;
+                width: 100px;
+                height: auto;
+            }
+        }
+    }
+}
+
+.main-quaternary {
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    .article-content {
+        background-color: #1f315d;
+        padding: 50px;
+    }
+
+    .article-list {
+        padding-left: 20px;
+        list-style: disc;
+    }
+
+    .article-link {
+        display: block;
+        position: relative;
+        &::before {
+            content: "\276D";
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+        }
+    }
+}
+
+.main-quinary {
+    padding-bottom: 60px;
+    &__content {
+        grid-gap: 40px 30px;
+
+        .article-img {
+            border-top-right-radius: 80px;
+            background-color: #eff9ff;
+            overflow: hidden;
+            .image-1 {
+                max-height: 260px;
+                width: auto;
+            }
+            .image-2 {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 77px;
+                height: auto;
+            }
+        }
+
+        .article-list {
+            padding-left: 20px;
+            list-style: disc;
+
+            li {
+                margin-top: 10px;
+            }
+        }
+    }
+}
+
+.main-senary {
+    background-image: url("../images/bg_2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.main-senary {
+    &__slide {
+        .article-content {
+            background-color: #002483;
+            padding: 30px 56px 60px;
+        }
+    }
+
+    &__button {
+        position: absolute;
+        bottom: 40px;
+        left: calc(50% + 56px);
+    }
+}
+
+.main-septenary {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    &__content {
+        grid-gap: 12px;
+        .article-large {
+            .article-content {
+                background-color: #eff9ff;
+            }
+        }
+
+        .article-small {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            .article-bot {
+                grid-gap: 12px;
+            }
+        }
+    }
+}
+
+.main-octonary {
+    background-color: #eff9ff;
+    &__left {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    &__right {
+        margin-right: -390px;
+    }
+
+    &__regulations {
+        .list {
+            list-style: disc;
+            a {
+                text-decoration: underline;
+            }
+        }
+    }
+}

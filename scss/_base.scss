@@ -99,7 +99,7 @@ a:active,
 a:focus {
     outline: 0;
     color: inherit;
-    color: #fb0505;
+    color: #73be44;
 }
 
 .link-decoration {
@@ -130,6 +130,10 @@ img {
 .w-1140 {
     max-width: 71.25rem;
     margin: 0 auto;
+}
+.w-left {
+    max-width: calc(1140px + (100% - 1140px) / 2);
+    margin-left: auto;
 }
 .w-full {
     width: 100%;
@@ -834,7 +838,14 @@ img {
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
 }
-
+.border-10 {
+    border-radius: 10px;
+    overflow: hidden;
+}
+.border-12 {
+    border-radius: 12px;
+    overflow: hidden;
+}
 /*=================================================================*/
 .fix-text {
     display: -webkit-box;
@@ -900,6 +911,9 @@ img {
 }
 .lh-40 {
     line-height: 2.5rem;
+}
+.lh-160 {
+    line-height: 160%;
 }
 
 /*=================================================================*/
@@ -1038,4 +1052,7 @@ img {
 .w-wrapper {
     padding-left: 20px;
     padding-right: 20px;
+}
+.over-hidden {
+    overflow: hidden;
 }

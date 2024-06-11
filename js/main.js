@@ -5,6 +5,12 @@ document.addEventListener("DOMContentLoaded", function () {
     // language
     var langContainer = document.querySelector(".js__languageContainer");
 
+    // slide
+    var oneSlides = document.querySelectorAll(".js__oneSlidesContainer");
+
+    // sticky header
+    var stickyHeaderPC = document.querySelector(".js__stickyHeader");
+
     const app = {
         // su ly cac su kien
         handleEvent: function () {
@@ -41,18 +47,40 @@ document.addEventListener("DOMContentLoaded", function () {
                 });
             }
         },
+        sliderOneItems: function () {
+            if (oneSlides) {
+                oneSlides.forEach((item) => {
+                    var slider = item.querySelector(".js__oneSlide");
+                    var next = item.querySelector(".swiper-button-next");
+                    var prev = item.querySelector(".swiper-button-prev");
+                    new Swiper(slider, {
+                        slidesPerView: 1,
+                        spaceBetween: 30,
+                        slidesPerGroup: 1,
+                        effect: "fade",
+                        autoHeight: true,
+                        // loop: true,
+                        fadeEffect: { crossFade: true },
+                        // autoplay: {
+                        //     delay: 5000,
+                        //     disableOnInteraction: false,
+                        //     pauseOnMouseEnter: true,
+                        // },
+                        navigation: {
+                            nextEl: next || null,
+                            prevEl: prev || null,
+                        },
+                    });
+                });
+            }
+        },
         // scroll top
         scrollFunc: function () {
-            if (backTop) {
-                if (
-                    document.body.scrollTop > 300 ||
-                    document.documentElement.scrollTop > 300
-                ) {
-                    backTop.style.opacity = 1;
-                    backTop.style.visibility = "visible";
-                } else {
-                    backTop.style.opacity = 0;
-                    backTop.style.visibility = "hidden";
+            if (stickyHeaderPC) {
+                const isSticky = scrollY > 100;
+                if (isSticky !== this.isSticky) {
+                    stickyHeaderPC.classList.toggle("sticky", isSticky);
+                    this.isSticky = isSticky;
                 }
             }
         },
@@ -71,6 +99,7 @@ document.addEventListener("DOMContentLoaded", function () {
             this.handleEvent();
             // window scroll
             this.windowScroll();
+            this.sliderOneItems();
         },
     };
 
