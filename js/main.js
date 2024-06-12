@@ -11,6 +11,12 @@ document.addEventListener("DOMContentLoaded", function () {
     // sticky header
     var stickyHeaderPC = document.querySelector(".js__stickyHeader");
 
+    // tab
+    var tabs = document.querySelectorAll(".js__tabContainer");
+
+    // video
+    const video169s = document.querySelectorAll(".js__video169");
+
     const app = {
         // su ly cac su kien
         handleEvent: function () {
@@ -46,6 +52,43 @@ document.addEventListener("DOMContentLoaded", function () {
                     };
                 });
             }
+
+            // tabs
+            if (tabs) {
+                tabs.forEach((tab) => {
+                    var tabItems = tab.querySelectorAll(".js__tabItem");
+                    var paneItems = tab.querySelectorAll(".js__tabPane");
+
+                    tabItems.forEach((tabItem, index) => {
+                        var pane = paneItems[index];
+
+                        tabItem.onclick = function () {
+                            tab.querySelector(
+                                ".js__tabItem.active"
+                            ).classList.remove("active");
+                            tab.querySelector(
+                                ".js__tabPane.active"
+                            ).classList.remove("active");
+
+                            this.classList.add("active");
+                            pane.classList.add("active");
+                        };
+                    });
+                });
+            }
+            // video 169
+
+            if (video169s) {
+                video169s.forEach((video169) => {
+                    var videos = video169.querySelectorAll("iframe");
+                    if (videos) {
+                        videos.forEach((video) => {
+                            var w = video.offsetWidth;
+                            video.style.height = (w * 9) / 16 + "px";
+                        });
+                    }
+                });
+            }
         },
         sliderOneItems: function () {
             if (oneSlides) {
@@ -53,6 +96,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     var slider = item.querySelector(".js__oneSlide");
                     var next = item.querySelector(".swiper-button-next");
                     var prev = item.querySelector(".swiper-button-prev");
+                    var pagi = item.querySelector(".swiper-pagination");
                     new Swiper(slider, {
                         slidesPerView: 1,
                         spaceBetween: 30,
@@ -70,9 +114,40 @@ document.addEventListener("DOMContentLoaded", function () {
                             nextEl: next || null,
                             prevEl: prev || null,
                         },
+                        pagination: {
+                            el: pagi,
+                            clickable: true,
+                        },
                     });
                 });
             }
+        },
+        // slider nhà đầu tư
+        sliderInvestos: function () {
+            var swiper5 = new Swiper(".mySwiperInvestor", {
+                slidesPerView: 3,
+                grid: {
+                    rows: 2,
+                    fill: "rows",
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next3",
+                    prevEl: ".swiper-button-prev3",
+                },
+                pagination: {
+                    el: ".swiper-pagination3",
+                    clickable: true,
+                },
+                hideOnClick: true,
+                breakpoints: {
+                    768: {
+                        slidesPerView: 4,
+                    },
+                    1024: {
+                        slidesPerView: 6,
+                    },
+                },
+            });
         },
         // scroll top
         scrollFunc: function () {
@@ -99,7 +174,10 @@ document.addEventListener("DOMContentLoaded", function () {
             this.handleEvent();
             // window scroll
             this.windowScroll();
+            // one slide
             this.sliderOneItems();
+            // slider nhà đầu tư
+            this.sliderInvestos();
         },
     };
 

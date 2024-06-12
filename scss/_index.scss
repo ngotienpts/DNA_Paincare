@@ -3,6 +3,25 @@
     position: relative;
     border-left: 4px solid #73be44;
 }
+.heading-secondary {
+    position: relative;
+    padding-left: 12px;
+    color: #0772b5;
+
+    &::before {
+        position: absolute;
+        content: "";
+        width: 4px;
+        height: 100%;
+        left: 0;
+        background-color: #73be44;
+    }
+}
+.heading-tertiary {
+    font-size: 46px;
+    font-weight: 500;
+    color: #1955a6;
+}
 .booking {
     &-img {
         width: 18px;
