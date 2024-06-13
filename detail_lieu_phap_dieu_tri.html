@@ -477,7 +477,6 @@
                             </li>
                             <!-- end item -->
                         </ul>
-                       
                         <!-- end navbar -->
                     </div>
                 </div>
@@ -493,380 +492,287 @@
         <!-- main -->
         <main id="main" class="main">
             <!-- primary -->
-            <section class="main-primary w-wrapper relative z-20 over-hidden">
-                <div class="main-primary__container d-3xl-flex items-center justify-between gap-20 w-1140">
-                    <!-- left -->
-                     <div class="main-primary__left flex-1">
-                        <h2 class="title-1 fs-24 text-white fw-700">Đội ngũ bác sĩ</h2>
-                        <h1 class="title-2 fs-40 text-green-73 fw-300">Giàu kinh nghiệm</h1>
-                        <p class="description fs-15 font-inter text-white lh-160 mt-12">Bệnh viện Quốc tế DNA sở hữu đội ngũ bác sĩ tên tuổi, tu nghiệp nước ngoài nhiều năm, có kiến thức sâu rộng và chuyên môn cao. Bên cạnh đó, đội ngũ chuyên gia cố vấn đến từ các nước có nền y tế phát triển như Anh, Mỹ, Nhật Bản,,... mang lại hiệu quả tuyệt vời nhất trong chặng đường chăm sóc sức khỏe cho khách hàng, hướng đến cuộc sống Trẻ - Khỏe - Thọ</p>
-                        <div class="mt-24 booking">
-                            <a href="#" class="btn">
-                                <span class="booking-text d-3xl-inline mr-10">Đặt lịch ngay</span>
-                                <img src="./images/svg/next-arrow-w.svg" class="booking-img" alt="">
-                            </a>
-                        </div>
-                     </div>
-                    <!-- end left -->
-                    <!-- right -->
-                     <div class="main-primary__right flex-0">
-                        <img src="./images/image_1.png" alt="" class="bg">
-                     </div>
-                    <!-- end right -->
+            <section class="introduce-info-primary relative z-20 over-hidden">
+                <div class="introduce-info-primary__bg">
+                <img src="./images/bg_2.1.png" alt="" class="image-1">
+                <img src="./images/bg_2.2.png" alt="" class="image-2">
+                <img src="./images/bg_2.5.png" alt="" class="image-3">
                 </div>
-             </section>
+            <div class="introduce-info-primary__container w-1140">
+                <div class="introduce-info-primary__inner w-40">
+                    <h1 class="introduce-info-primary__title1 fs-24 fw-600 text-white">Liệu pháp điều trị</h1>
+                    <h2 class="introduce-info-primary__title2 fs-40 fw-300 text-green-73">Liệu pháp Ozone là gì? Lợi ích của liệu pháp Ozone cho sức khỏe</h2>
+                </div>
+            </div>
+            </section>
             <!-- end primary -->
+
+            <!-- detail navbar-->
+            <div class="detail-navbar relative z-50 w-wrapper py-20 bg-white">
+                <ul class="detail-navbar__container navbar text-blue-077 w-1140 d-3xl-flex items-center fs-14 gap-24">
+                    <!-- item -->
+                    <li class="navbar-item">
+                        <a href="#" class="navbar-link">
+                            <img
+                                src="./images/svg/home-blue.svg"
+                                alt=""
+                            />
+                        </a>
+                    </li>
+                    <!-- end item -->
+                    <!-- item -->
+                    <li class="navbar-item">
+                        <a href="#" class="navbar-link"
+                            >Liệu pháp điều trị</a
+                        >
+                    </li>
+                    <!-- end item -->
+                    
+                    <!-- item -->
+                    <li class="navbar-item navbar-item--more">
+                        <a href="#" class="navbar-link text-green-73">Liệu pháp Ozone</a>
+                        <ul class="navbar-dropdown">
+                            <li class="navbar-dropdown__item">
+                                <a
+                                    href="#"
+                                    class="navbar-dropdown__link"
+                                    >Cate 1</a
+                                >
+                            </li>
+                            <li class="navbar-dropdown__item">
+                                <a
+                                    href="#"
+                                    class="navbar-dropdown__link"
+                                    >Cate 1</a
+                                >
+                            </li>
+                            <li class="navbar-dropdown__item">
+                                <a
+                                    href="#"
+                                    class="navbar-dropdown__link"
+                                    >Cate 1</a
+                                >
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- end item -->
+                </ul>
+            </div>
+            <!-- end detail navbar -->
             
-            <!-- secondary -->
-             <section class="introduce-pro-secondary w-wrapper relative z-20 over-hidden">
-                <div class="introduce-pro-secondary__container w-1140">
-                    <div class="introduce-pro-secondary__top bg-blue-eff">
-                        <h2 class="cate-doctor-primary__title fs-20 fw-600 text-blue-195 mb-20">
-                            Tìm bác sĩ
-                        </h2>
-                        <div class="cate-doctor-primary__select d-3xl-flex items-center fs-16">
-                            <!-- item -->
-                            <select class="cate-doctor-primary__selectItem cate-doctor-primary__selectDepartment w-full fs-16 bg-white flex-1">
-                                <option value="0">Lựa chọn chuyên khoa</option>
-                                <option value="1">chuyên khoa 1</option>
-                                <option value="2">chuyên khoa 2</option>
-                                <option value="3">chuyên khoa 3</option>
-                            </select>
-                            <!-- end item -->
-                            <!-- item -->
-                            <select class="cate-doctor-primary__selectItem cate-doctor-primary__selectLocation w-full fs-16 bg-white flex-1">
-                                <option value="0">Địa điểm</option>
-                                <option value="1">chuyên khoa 1</option>
-                                <option value="2">chuyên khoa 2</option>
-                                <option value="3">chuyên khoa 3</option>
-                            </select>
-                            <!-- end item -->
-                            <button type="submit" class="cate-doctor-primary__selectItemBtn flex-0 d-3xl-flex items-center justify-center bg-blue-195 cursor text-white fs-16">
-                                <span>Xóa lọc</span>
-                                <img src="./images/svg/delete.svg" alt="" class="ml-15">
-                            </button>
-                        </div>
-                    </div>
-                    <div class="main-quinary__container mt-40">
-                        <!-- heading -->
-                        <h2 class="heading-primary fs-36 fw-600 text-blue-077 uppercase lh-160">
-                            <a href="#">Đội ngũ chuyển gia</a>
-                        </h2>
-                        <!-- end heading -->
-    
-                        <!-- content -->
-                         <div class="main-quinary__content d-3xl-grid col-4 mt-30">
-                            <!-- article -->
-                            <div class="article">
-                                <!-- img -->
-                                 <div class="article-img">
-                                    <a href="#" class="image-wrapper-full">
-                                        <img src="./images/doctor_1.png" alt="" class="image-1">
-                                        <img src="./images/svg/border-6.svg" alt="" class="image-2">
-                                    </a>
-                                 </div>
-                                <!-- end img -->
-                                 <!-- content -->
-                                  <div class="article-content mt-24">
-                                    <h3 class="article-title-1 fs-20 fw-600 text-blue-077">BS. Lưu Văn Minh</h3>
-                                    <ul class="article-list">
-                                        <li>Tiến sĩ, Bác sĩ</li>
-                                        <li>Khoa ung bướu bênh viện quốc tế DNA</li>
-                                    </ul>
-                                  </div>
-                                 <!-- end content -->
-                             </div>
-                            <!-- end article -->
-                            <!-- article -->
-                            <div class="article">
-                                <!-- img -->
-                                 <div class="article-img">
-                                    <a href="#" class="image-wrapper-full">
-                                        <img src="./images/doctor_2.png" alt="" class="image-1">
-                                        <img src="./images/svg/border-6.svg" alt="" class="image-2">
-                                    </a>
-                                 </div>
-                                <!-- end img -->
-                                 <!-- content -->
-                                  <div class="article-content mt-24">
-                                    <h3 class="article-title-1 fs-20 fw-600 text-blue-077">BS. Lưu Văn Minh</h3>
-                                    <ul class="article-list">
-                                        <li>Tiến sĩ, Bác sĩ</li>
-                                        <li>Khoa ung bướu bênh viện quốc tế DNA</li>
-                                    </ul>
-                                  </div>
-                                 <!-- end content -->
-                             </div>
-                            <!-- end article -->
-                            <!-- article -->
-                            <div class="article">
-                                <!-- img -->
-                                 <div class="article-img">
-                                    <a href="#" class="image-wrapper-full">
-                                        <img src="./images/doctor_3.png" alt="" class="image-1">
-                                        <img src="./images/svg/border-6.svg" alt="" class="image-2">
-                                    </a>
-                                 </div>
-                                <!-- end img -->
-                                 <!-- content -->
-                                  <div class="article-content mt-24">
-                                    <h3 class="article-title-1 fs-20 fw-600 text-blue-077">BS. Lưu Văn Minh</h3>
-                                    <ul class="article-list">
-                                        <li>Tiến sĩ, Bác sĩ</li>
-                                        <li>Khoa ung bướu bênh viện quốc tế DNA</li>
-                                    </ul>
-                                  </div>
-                                 <!-- end content -->
-                             </div>
-                            <!-- end article -->
-                            <!-- article -->
-                            <div class="article">
-                                <!-- img -->
-                                 <div class="article-img">
-                                    <a href="#" class="image-wrapper-full">
-                                        <img src="./images/doctor_4.png" alt="" class="image-1">
-                                        <img src="./images/svg/border-6.svg" alt="" class="image-2">
-                                    </a>
-                                 </div>
-                                <!-- end img -->
-                                 <!-- content -->
-                                  <div class="article-content mt-24">
-                                    <h3 class="article-title-1 fs-20 fw-600 text-blue-077">BS. Lưu Văn Minh</h3>
-                                    <ul class="article-list">
-                                        <li>Tiến sĩ, Bác sĩ</li>
-                                        <li>Khoa ung bướu bênh viện quốc tế DNA</li>
-                                    </ul>
-                                  </div>
-                                 <!-- end content -->
-                             </div>
-                            <!-- end article -->
-                            <!-- article -->
-                            <div class="article">
-                                <!-- img -->
-                                 <div class="article-img">
-                                    <a href="#" class="image-wrapper-full">
-                                        <img src="./images/doctor_5.png" alt="" class="image-1">
-                                        <img src="./images/svg/border-6.svg" alt="" class="image-2">
-                                    </a>
-                                 </div>
-                                <!-- end img -->
-                                 <!-- content -->
-                                  <div class="article-content mt-24">
-                                    <h3 class="article-title-1 fs-20 fw-600 text-blue-077">BS. Lưu Văn Minh</h3>
-                                    <ul class="article-list">
-                                        <li>Tiến sĩ, Bác sĩ</li>
-                                        <li>Khoa ung bướu bênh viện quốc tế DNA</li>
-                                    </ul>
-                                  </div>
-                                 <!-- end content -->
-                             </div>
-                            <!-- end article -->
-                            <!-- article -->
-                            <div class="article">
-                                <!-- img -->
-                                 <div class="article-img">
-                                    <a href="#" class="image-wrapper-full">
-                                        <img src="./images/doctor_6.png" alt="" class="image-1">
-                                        <img src="./images/svg/border-6.svg" alt="" class="image-2">
-                                    </a>
-                                 </div>
-                                <!-- end img -->
-                                 <!-- content -->
-                                  <div class="article-content mt-24">
-                                    <h3 class="article-title-1 fs-20 fw-600 text-blue-077">BS. Lưu Văn Minh</h3>
-                                    <ul class="article-list">
-                                        <li>Tiến sĩ, Bác sĩ</li>
-                                        <li>Khoa ung bướu bênh viện quốc tế DNA</li>
-                                    </ul>
-                                  </div>
-                                 <!-- end content -->
-                             </div>
-                            <!-- end article -->
-                            <!-- article -->
-                            <div class="article">
-                                <!-- img -->
-                                 <div class="article-img">
-                                    <a href="#" class="image-wrapper-full">
-                                        <img src="./images/doctor_7.png" alt="" class="image-1">
-                                        <img src="./images/svg/border-6.svg" alt="" class="image-2">
-                                    </a>
-                                 </div>
-                                <!-- end img -->
-                                 <!-- content -->
-                                  <div class="article-content mt-24">
-                                    <h3 class="article-title-1 fs-20 fw-600 text-blue-077">BS. Lưu Văn Minh</h3>
-                                    <ul class="article-list">
-                                        <li>Tiến sĩ, Bác sĩ</li>
-                                        <li>Khoa ung bướu bênh viện quốc tế DNA</li>
-                                    </ul>
-                                  </div>
-                                 <!-- end content -->
-                             </div>
-                            <!-- end article -->
-                            <!-- article -->
-                            <div class="article">
-                                <!-- img -->
-                                 <div class="article-img">
-                                    <a href="#" class="image-wrapper-full">
-                                        <img src="./images/doctor_8.png" alt="" class="image-1">
-                                        <img src="./images/svg/border-6.svg" alt="" class="image-2">
-                                    </a>
-                                 </div>
-                                <!-- end img -->
-                                 <!-- content -->
-                                  <div class="article-content mt-24">
-                                    <h3 class="article-title-1 fs-20 fw-600 text-blue-077">BS. Lưu Văn Minh</h3>
-                                    <ul class="article-list">
-                                        <li>Tiến sĩ, Bác sĩ</li>
-                                        <li>Khoa ung bướu bênh viện quốc tế DNA</li>
-                                    </ul>
-                                  </div>
-                                 <!-- end content -->
-                             </div>
-                            <!-- end article -->
-                         </div>
-                        <!-- end content -->
-                        <div class="mt-24 booking">
-                            <a href="#" class="btn">
-                                <span class="booking-text d-3xl-inline mr-10">Xem thêm</span>
-                                <img src="./images/svg/next-arrow-w.svg" class="booking-img" alt="">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-             </section>
-            <!-- end secondary -->
-
-            <!-- tertiary -->
-            <section class="introduce-pro-tertiary w-wrapper relative z-20 over-hidden">
-                <div class="introduce-pro-tertiary__container relative w-1140 bg-blue-195 border-10 d-3xl-flex items-center">
-                    <div class="introduce-pro-tertiary__bg">
-                        <img src="./images/DNA_2.png" alt="">
-                    </div>
-                    <!-- left -->
-                     <div class="left flex-1">
-                        <h2 class="title-1 fs-32 text-green-73 fw-300">Đặt hẹn tại phòng khám DNA để được các bác sĩ</h2>
-                        <h3 class="title-2 fs-32 text-white fw-500">thăm khám và chữa trị kịp thời!</h3>
-                     </div>
-                    <!-- end left -->
-                    <!-- right -->
-                     <div class="right w-30 text-center">
-                        <a href="#" class="footer-fixed__booking btn btn--tertiary">
-                            <div class="footer-fixed__booking-inner d-3xl-flex items-center">
-                                <img src="./images/svg/feedback_green.svg" alt="" class="mr-8">
-                                <span>Đặt lịch hẹn</span>
+            <!-- primay detail-->
+            <section class="detail-sick-primary w-wrapper relative z-20">
+                <div class="detail-sick-primary__container w-1140">
+                    <div class="detail-content detail-content--secondary js__video169">
+                        <div class="detail-author fs-13 font-arial mb-20 d-3xl-flex items-center">
+                            <div class="detail-author__left d-3xl-flex items-center">
+                                <div class="detail-author__img">
+                                    <img src="./images/3.jpg" alt="">
+                                </div>
+                                <div class="detail-author__text d-3xl-flex items-center">
+                                    <span class="text-green-006"><strong>Trường max </strong>&nbsp;| &nbsp;</span>
+                                    <span class="text-gray-66">Thứ sáu, 10/05/2024 06:02
+                                        (GMT+7)</span>
+                                </div>
                             </div>
-                            </a>
-                     </div>
-                    <!-- end right -->
-                </div>
-             </section>
-            <!-- end tertiary -->
-
-            <!-- quinary -->
-             <section class="introduce-info-quinary w-wrapper relative z-20 over-hidden">
-                <div class="introduce-info-quinary__container relative w-1140 js__oneSlidesContainer">
-                    <!-- heading -->
-                    <div class="introduce-info-quinary__heading">
-                        <h2 class="introduce-info-secondary__title1 fs-40 fw-300 text-green-73">Chia sẻ của</h2>
-                        <h3 class="introduce-info-secondary__title2 fw-500 text-blue-077">Khách hàng</h3>
+                            <a href="#" class="btn btn--quinary fw-400 ml-10">Liên hệ</a>
+                        </div>
+                        <div class="detail-title fs-36 fw-600">Liệu pháp Ozone là gì? Lợi ích của liệu pháp Ozone cho sức khỏe</div>
+                        <h2>Giới thiệu</h2>
+                        <p>Hiện tại, Bác sĩ Bùi Trọng Hưng là bác sĩ có nhiều chuyên môn trong sơ cứu, khám bệnh, chữa bệnh đối với bệnh nội khoa.</p>
+                        <ul>
+                            <li>Năm 1998, Bác sĩ Hưng được cấp bằng Bác sĩ Đa khoa tại Trường Đại học Y dược Thành phố Hồ Chí Minh.</li>
+                            <li>Năm 2009, Bác sĩ được cấp bằng Bác sĩ chuyên khoa I, chuyên ngành Lão khoa tại Trường Đại học Y dược Thành phố Hồ Chí Minh.</li>
+                            <li>Năm 2018, Bác sĩ được cấp bằng Bác sĩ chuyên khoa II, chuyên ngành Nội tổng quát tại Đại học Y khoa Phạm Ngọc Thạch.</li>
+                            <li>Hiện nay, Bác sĩ Bùi Trọng Hưng đang giữ vị trí Trưởng khoa Khám bệnh cấp cứu tại Bệnh viện Quốc tế DNA</li>
+                        </ul>
+                        <h2>Kinh nghiệm</h2>
+                        <p>Hiện tại, Bác sĩ Bùi Trọng Hưng là bác sĩ có nhiều chuyên môn trong sơ cứu, khám bệnh, chữa bệnh đối với bệnh nội khoa.</p>
+                        <ul>
+                            <li>Năm 1998, Bác sĩ Hưng được cấp bằng Bác sĩ Đa khoa tại Trường Đại học Y dược Thành phố Hồ Chí Minh.</li>
+                            <li>Năm 2009, Bác sĩ được cấp bằng Bác sĩ chuyên khoa I, chuyên ngành Lão khoa tại Trường Đại học Y dược Thành phố Hồ Chí Minh.</li>
+                            <li>Năm 2018, Bác sĩ được cấp bằng Bác sĩ chuyên khoa II, chuyên ngành Nội tổng quát tại Đại học Y khoa Phạm Ngọc Thạch.</li>
+                            <li>Hiện nay, Bác sĩ Bùi Trọng Hưng đang giữ vị trí Trưởng khoa Khám bệnh cấp cứu tại Bệnh viện Quốc tế DNA</li>
+                        </ul>
+                        <h2>Quá trình đào tạo</h2>
+                        <p>Hiện tại, Bác sĩ Bùi Trọng Hưng là bác sĩ có nhiều chuyên môn trong sơ cứu, khám bệnh, chữa bệnh đối với bệnh nội khoa.</p>
+                        <ul>
+                            <li>Năm 1998, Bác sĩ Hưng được cấp bằng Bác sĩ Đa khoa tại Trường Đại học Y dược Thành phố Hồ Chí Minh.</li>
+                            <li>Năm 2009, Bác sĩ được cấp bằng Bác sĩ chuyên khoa I, chuyên ngành Lão khoa tại Trường Đại học Y dược Thành phố Hồ Chí Minh.</li>
+                            <li>Năm 2018, Bác sĩ được cấp bằng Bác sĩ chuyên khoa II, chuyên ngành Nội tổng quát tại Đại học Y khoa Phạm Ngọc Thạch.</li>
+                            <li>Hiện nay, Bác sĩ Bùi Trọng Hưng đang giữ vị trí Trưởng khoa Khám bệnh cấp cứu tại Bệnh viện Quốc tế DNA</li>
+                        </ul>
+                        <figure class="expNoEdit">
+                            <img src="./images/2.jpg" alt="">
+                            <figcaption>
+                                <h2 class="expEdit">
+                                    <em>Ảnh minh hoạ. Nguồn:
+                                        Internet</em>
+                                </h2>
+                            </figcaption>
+                        </figure>
+                        <h2>Giới thiệu</h2>
+                        <p>Hiện tại, Bác sĩ Bùi Trọng Hưng là bác sĩ có nhiều chuyên môn trong sơ cứu, khám bệnh, chữa bệnh đối với bệnh nội khoa.</p>
+                        <ul>
+                            <li>Năm 1998, Bác sĩ Hưng được cấp bằng Bác sĩ Đa khoa tại Trường Đại học Y dược Thành phố Hồ Chí Minh.</li>
+                            <li>Năm 2009, Bác sĩ được cấp bằng Bác sĩ chuyên khoa I, chuyên ngành Lão khoa tại Trường Đại học Y dược Thành phố Hồ Chí Minh.</li>
+                            <li>Năm 2018, Bác sĩ được cấp bằng Bác sĩ chuyên khoa II, chuyên ngành Nội tổng quát tại Đại học Y khoa Phạm Ngọc Thạch.</li>
+                            <li>Hiện nay, Bác sĩ Bùi Trọng Hưng đang giữ vị trí Trưởng khoa Khám bệnh cấp cứu tại Bệnh viện Quốc tế DNA</li>
+                        </ul>
+                        <iframe width="1250" height="703" src="https://www.youtube.com/embed/uZHmBcyDybY" title="TƯ VẤN TRỰC TUYẾN - UNG THƯ DẠ DÀY KHÔNG CÒN LÀ &quot;ÁN TỬ&quot; NẾU PHÁT HIỆN VÀ ĐIỀU TRỊ SỚM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <h2>Kinh nghiệm</h2>
+                        <p>Hiện tại, Bác sĩ Bùi Trọng Hưng là bác sĩ có nhiều chuyên môn trong sơ cứu, khám bệnh, chữa bệnh đối với bệnh nội khoa.</p>
+                        <ul>
+                            <li>Năm 1998, Bác sĩ Hưng được cấp bằng Bác sĩ Đa khoa tại Trường Đại học Y dược Thành phố Hồ Chí Minh.</li>
+                            <li>Năm 2009, Bác sĩ được cấp bằng Bác sĩ chuyên khoa I, chuyên ngành Lão khoa tại Trường Đại học Y dược Thành phố Hồ Chí Minh.</li>
+                            <li>Năm 2018, Bác sĩ được cấp bằng Bác sĩ chuyên khoa II, chuyên ngành Nội tổng quát tại Đại học Y khoa Phạm Ngọc Thạch.</li>
+                            <li>Hiện nay, Bác sĩ Bùi Trọng Hưng đang giữ vị trí Trưởng khoa Khám bệnh cấp cứu tại Bệnh viện Quốc tế DNA</li>
+                        </ul>
+                        <h2>Quá trình đào tạo</h2>
+                        <p>Hiện tại, Bác sĩ Bùi Trọng Hưng là bác sĩ có nhiều chuyên môn trong sơ cứu, khám bệnh, chữa bệnh đối với bệnh nội khoa.</p>
+                        <ul>
+                            <li>Năm 1998, Bác sĩ Hưng được cấp bằng Bác sĩ Đa khoa tại Trường Đại học Y dược Thành phố Hồ Chí Minh.</li>
+                            <li>Năm 2009, Bác sĩ được cấp bằng Bác sĩ chuyên khoa I, chuyên ngành Lão khoa tại Trường Đại học Y dược Thành phố Hồ Chí Minh.</li>
+                            <li>Năm 2018, Bác sĩ được cấp bằng Bác sĩ chuyên khoa II, chuyên ngành Nội tổng quát tại Đại học Y khoa Phạm Ngọc Thạch.</li>
+                            <li>Hiện nay, Bác sĩ Bùi Trọng Hưng đang giữ vị trí Trưởng khoa Khám bệnh cấp cứu tại Bệnh viện Quốc tế DNA</li>
+                        </ul>
                     </div>
+                </div>
+            </section>
+            <!-- end primay detail-->
+
+            <!-- tin lien quan -->
+             <section class="related-news w-wrapper relative z-20 over-hidden">
+                <div class="related-news__container w-1140">
+                    <!-- heading -->
+                    <h2 class="heading-primary fs-24 fw-600 text-blue-077 uppercase lh-160">
+                        <a href="#">Tin liên quan</a>
+                    </h2>
                     <!-- end heading -->
 
-                    <!-- content -->
-                     <div class="introduce-info-quinary__content">
-                        <div class="swiper js__oneSlide">
-                            <div class="swiper-wrapper">
-                                <!-- slide -->
-                                 <div class="swiper-slide">
-                                    <div class="article d-3xl-flex">
-                                        <!-- img -->
-                                        <div class="article-img flex-0">
-                                            <div class="image-wrapper-full">
-                                                <img src="./images/3.jpg" alt="">
-                                            </div>
-                                        </div>
-                                        <!-- end img -->
-                                         <!-- content -->
-                                         <div class="article-content bg-gray-f1 py-20 px-40 flex-1">
-                                            <h3 class="article-title fix-text3 fs-20 fw-600 text-blue-195">
-                                                Cô Lê Thị Minh
-                                            </h3>
-                                            <span class="article-location fs-16 text-green-73">TP.HCM</span>
-                                            <p class="article-des mt-15 fs-15 font-arial">
-                                                Tôi ngủ ngon hơn, da dẻ mịn màng, tinh thần phấn khởi sau khi thực hiện liệu trình tế bào "tinh hoa"Tôi ngủ ngon hơn, da dẻ mịn màng, tinh thần phấn khởi sau khi thực hiện liệu trình tế bào "tinh hoa"
-                                            </p>
-                                            <div class="article-quotation">
-                                                <img src="./images/svg/nhay-blue.svg" alt="">
-                                            </div>
-                                        </div>
-                                         <!-- end content -->
-                                    </div>
-                                 </div>
-                                <!-- end slide -->
-                                <!-- slide -->
-                                 <div class="swiper-slide">
-                                    <div class="article d-3xl-flex">
-                                        <!-- img -->
-                                        <div class="article-img flex-0">
-                                            <div class="image-wrapper-full">
-                                                <img src="./images/3.jpg" alt="">
-                                            </div>
-                                        </div>
-                                        <!-- end img -->
-                                         <!-- content -->
-                                         <div class="article-content bg-gray-f1 py-20 px-40 flex-1">
-                                            <h3 class="article-title fix-text3 fs-20 fw-600 text-blue-195">
-                                                Cô Lê Thị Minh
-                                            </h3>
-                                            <span class="article-location fs-16 text-green-73">TP.HCM</span>
-                                            <p class="article-des mt-15 fs-15 font-arial">
-                                                Tôi ngủ ngon hơn, da dẻ mịn màng, tinh thần phấn khởi sau khi thực hiện liệu trình tế bào "tinh hoa"Tôi ngủ ngon hơn, da dẻ mịn màng, tinh thần phấn khởi sau khi thực hiện liệu trình tế bào "tinh hoa"
-                                            </p>
-                                            <div class="article-quotation">
-                                                <img src="./images/svg/nhay-blue.svg" alt="">
-                                            </div>
-                                        </div>
-                                         <!-- end content -->
-                                    </div>
-                                 </div>
-                                <!-- end slide -->
-                                <!-- slide -->
-                                 <div class="swiper-slide">
-                                    <div class="article d-3xl-flex">
-                                        <!-- img -->
-                                        <div class="article-img flex-0">
-                                            <div class="image-wrapper-full">
-                                                <img src="./images/3.jpg" alt="">
-                                            </div>
-                                        </div>
-                                        <!-- end img -->
-                                         <!-- content -->
-                                         <div class="article-content bg-gray-f1 py-20 px-40 flex-1">
-                                            <h3 class="article-title fix-text3 fs-20 fw-600 text-blue-195">
-                                                Cô Lê Thị Minh
-                                            </h3>
-                                            <span class="article-location fs-16 text-green-73">TP.HCM</span>
-                                            <p class="article-des mt-15 fs-15 font-arial">
-                                                Tôi ngủ ngon hơn, da dẻ mịn màng, tinh thần phấn khởi sau khi thực hiện liệu trình tế bào "tinh hoa"Tôi ngủ ngon hơn, da dẻ mịn màng, tinh thần phấn khởi sau khi thực hiện liệu trình tế bào "tinh hoa"
-                                            </p>
-                                            <div class="article-quotation">
-                                                <img src="./images/svg/nhay-blue.svg" alt="">
-                                            </div>
-                                        </div>
-                                         <!-- end content -->
-                                    </div>
-                                 </div>
-                                <!-- end slide -->
+                    <!-- container -->
+                    <div class="related-news__content">
+                        <!-- article -->
+                        <div class="article d-3xl-flex border-e5 py-20">
+                            <!-- img -->
+                            <div class="article__img flex-0 w-30">
+                                <a href="#" class="image-wrapper">
+                                    <img src="./images/3.jpg" alt="">
+                                </a>
                             </div>
+                            <!-- end img -->
+                            <!-- content -->
+                            <div class="article__content flex-1 pl-15">
+                                <h3 class="article__title fix-text3 fs-20 fw-500">
+                                    <a href="#">Học viện Nông nghiệp Việt Nam -
+                                        nơi ươm mầm nông nghiệp thông
+                                        minh</a>
+                                </h3>
+                                <p class="article__des fix-text4 fs-15 font-arial text-gray-44 pt-10">
+                                    Là đất nước sản xuất muối tiềm năng,
+                                    nhưng mỗi năm Việt Nam vẫn phải nhập
+                                    khẩu muối để đáp ứng nhu cầu trong
+                                    nước. Muối nội địa có giá thành cao,
+                                    chất lượng thấp, rất khó cạnh tranh
+                                    với muối nhập khẩu nên khó tiêu thụ.
+                                </p>
+                                <div class="time-public d-3xl-flex items-center fs-13 font-arial pt-10">
+                                    <span class="d-3xl-inline-block fw-700 text-gray-66">Quốc tế</span>
+                                    <span class="d-3xl-inline-block fw-400 text-gray-82">&nbsp;-&nbsp;7h</span>
+                                </div>
+                            </div>
+                            <!-- end content -->
                         </div>
-                        <div class="swiper-pagination"></div>
-                     </div>
-                    <!-- end content -->
+                        <!-- end article -->
+                        <!-- article -->
+                        <div class="article d-3xl-flex border-e5 py-20">
+                            <!-- img -->
+                            <div class="article__img flex-0 w-30">
+                                <a href="#" class="image-wrapper">
+                                    <img src="./images/3.jpg" alt="">
+                                </a>
+                            </div>
+                            <!-- end img -->
+                            <!-- content -->
+                            <div class="article__content flex-1 pl-15">
+                                <h3 class="article__title fix-text3 fs-20 fw-500">
+                                    <a href="#">Học viện Nông nghiệp Việt Nam -
+                                        nơi ươm mầm nông nghiệp thông
+                                        minh</a>
+                                </h3>
+                                <p class="article__des fix-text4 fs-15 font-arial text-gray-44 pt-10">
+                                    Là đất nước sản xuất muối tiềm năng,
+                                    nhưng mỗi năm Việt Nam vẫn phải nhập
+                                    khẩu muối để đáp ứng nhu cầu trong
+                                    nước. Muối nội địa có giá thành cao,
+                                    chất lượng thấp, rất khó cạnh tranh
+                                    với muối nhập khẩu nên khó tiêu thụ.
+                                </p>
+                                <div class="time-public d-3xl-flex items-center fs-13 font-arial pt-10">
+                                    <span class="d-3xl-inline-block fw-700 text-gray-66">Quốc tế</span>
+                                    <span class="d-3xl-inline-block fw-400 text-gray-82">&nbsp;-&nbsp;7h</span>
+                                </div>
+                            </div>
+                            <!-- end content -->
+                        </div>
+                        <!-- end article -->
+                        <!-- article -->
+                        <div class="article d-3xl-flex border-e5 py-20">
+                            <!-- img -->
+                            <div class="article__img flex-0 w-30">
+                                <a href="#" class="image-wrapper">
+                                    <img src="./images/3.jpg" alt="">
+                                </a>
+                            </div>
+                            <!-- end img -->
+                            <!-- content -->
+                            <div class="article__content flex-1 pl-15">
+                                <h3 class="article__title fix-text3 fs-20 fw-500">
+                                    <a href="#">Học viện Nông nghiệp Việt Nam -
+                                        nơi ươm mầm nông nghiệp thông
+                                        minh</a>
+                                </h3>
+                                <p class="article__des fix-text4 fs-15 font-arial text-gray-44 pt-10">
+                                    Là đất nước sản xuất muối tiềm năng,
+                                    nhưng mỗi năm Việt Nam vẫn phải nhập
+                                    khẩu muối để đáp ứng nhu cầu trong
+                                    nước. Muối nội địa có giá thành cao,
+                                    chất lượng thấp, rất khó cạnh tranh
+                                    với muối nhập khẩu nên khó tiêu thụ.
+                                </p>
+                                <div class="time-public d-3xl-flex items-center fs-13 font-arial pt-10">
+                                    <span class="d-3xl-inline-block fw-700 text-gray-66">Quốc tế</span>
+                                    <span class="d-3xl-inline-block fw-400 text-gray-82">&nbsp;-&nbsp;7h</span>
+                                </div>
+                            </div>
+                            <!-- end content -->
+                        </div>
+                        <!-- end article -->
+                        
+                    </div>
+                    <!-- end container -->
+
+                    <!-- pagination -->
+                    <ul class="pagination d-3xl-flex items-center fs-14 fw-500 text-gray-66 mt-20">
+                        <li class="pagination-item active">
+                            <a href="#" class="pagination-link">01</a>
+                        </li>
+                        <li class="pagination-item">
+                            <a href="#" class="pagination-link">01</a>
+                        </li>
+                        <li class="pagination-item">
+                            <a href="#" class="pagination-link">01</a>
+                        </li>
+                        <li class="pagination-item">
+                            <a href="#" class="pagination-link">01</a>
+                        </li>
+                    </ul>
+                    <!-- end pagination -->
                 </div>
              </section>
-            <!-- end quinary -->
+            <!-- end tin lien quan -->
 
+            
             <!-- nhà đầu tư -->
             <section class="investors-wrapper">
                 <div class="investors w-1140">
@@ -1068,40 +974,40 @@
             </section>
             <!-- end  nhà đầu tư -->
 
-             <!-- octonary -->
-             <section class="main-octonary w-wrapper relative z-20 over-hidden">
-                <div class="main-octonary__container w-1140 d-3xl-flex">
-                    <!-- left -->
-                     <div class="main-octonary__left flex-1">
-                        <!-- heading -->
-                        <h2 class="heading-primary fs-36 fw-600 text-blue-077 uppercase lh-160">
-                            <a href="#">Liên hệ</a>
-                        </h2>
-                        <!-- end heading -->
-                         <h3 class="main-octonary__title fs-24 text-blue-077 mt-40 uppercase">Bệnh viện quốc tế DNA</h3>
-                         <div class="main-octonary__text mt-16">
-                             <p class="mb-16">1015 Trần Hưng Đạo, P.5, Q.5, Tp.HCM</p>
-                             <p class="mb-16">Hotline: 1900 2840</p>
-                             <p class="mb-16">Email: info@benhvienquoctedna.vn</p>
-                             <p class="mb-16">Facebook: facebook.com/benhvienquoctedna.vn</p>
-                         </div>
-                         <div class="main-octonary__regulations mt-40">
-                             <h4 class="title uppercase mb-8">Quy chế hoạt động</h4>
-                             <ul class="list pl-30">
-                                <li class="mb-8"><a href="#">Quy chế hoạt động</a></li>
-                                <li class="mb-8"><a href="#">Trách nhiệm và cam kết</a></li>
-                                <li class="mb-8"><a href="#">Chính sách bảo mật & sử dụng</a></li>
-                             </ul>
-                         </div>
-                     </div>
-                    <!-- end left -->
-                    <!-- right -->
-                     <div class="main-octonary__right flex-1">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.7521916873466!2d106.67295107573581!3d10.753572059613486!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f6186f15b95%3A0x51ea231980e909f0!2zQuG7h25oIFZp4buHbiBRdeG7kWMgVOG6vyBETkE!5e0!3m2!1svi!2s!4v1718093233475!5m2!1svi!2s" width="966" height="640" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                     </div>
-                    <!-- end right -->
-                </div>
-             </section>
+            <!-- octonary -->
+            <section class="main-octonary w-wrapper relative z-20 over-hidden">
+            <div class="main-octonary__container w-1140 d-3xl-flex">
+                <!-- left -->
+                    <div class="main-octonary__left flex-1">
+                    <!-- heading -->
+                    <h2 class="heading-primary fs-36 fw-600 text-blue-077 uppercase lh-160">
+                        <a href="#">Liên hệ</a>
+                    </h2>
+                    <!-- end heading -->
+                        <h3 class="main-octonary__title fs-24 text-blue-077 mt-40 uppercase">Bệnh viện quốc tế DNA</h3>
+                        <div class="main-octonary__text mt-16">
+                            <p class="mb-16">1015 Trần Hưng Đạo, P.5, Q.5, Tp.HCM</p>
+                            <p class="mb-16">Hotline: 1900 2840</p>
+                            <p class="mb-16">Email: info@benhvienquoctedna.vn</p>
+                            <p class="mb-16">Facebook: facebook.com/benhvienquoctedna.vn</p>
+                        </div>
+                        <div class="main-octonary__regulations mt-40">
+                            <h4 class="title uppercase mb-8">Quy chế hoạt động</h4>
+                            <ul class="list pl-30">
+                            <li class="mb-8"><a href="#">Quy chế hoạt động</a></li>
+                            <li class="mb-8"><a href="#">Trách nhiệm và cam kết</a></li>
+                            <li class="mb-8"><a href="#">Chính sách bảo mật & sử dụng</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                <!-- end left -->
+                <!-- right -->
+                    <div class="main-octonary__right flex-1">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.7521916873466!2d106.67295107573581!3d10.753572059613486!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f6186f15b95%3A0x51ea231980e909f0!2zQuG7h25oIFZp4buHbiBRdeG7kWMgVOG6vyBETkE!5e0!3m2!1svi!2s!4v1718093233475!5m2!1svi!2s" width="966" height="640" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                <!-- end right -->
+            </div>
+            </section>
             <!-- end octonary -->
             
         </main>

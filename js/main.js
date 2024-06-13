@@ -17,6 +17,9 @@ document.addEventListener("DOMContentLoaded", function () {
     // video
     const video169s = document.querySelectorAll(".js__video169");
 
+    // show full text
+    const fullTexts = document.querySelectorAll(".js__fullTextContainer");
+
     const app = {
         // su ly cac su kien
         handleEvent: function () {
@@ -87,6 +90,24 @@ document.addEventListener("DOMContentLoaded", function () {
                             video.style.height = (w * 9) / 16 + "px";
                         });
                     }
+                });
+            }
+
+            // full text
+            if (fullTexts) {
+                fullTexts.forEach((fullText) => {
+                    const showFullText =
+                        fullText.querySelector(".js__showFullText");
+                    const changeText =
+                        fullText.querySelector(".js__changeText");
+                    showFullText.onclick = function () {
+                        fullText.classList.toggle("full");
+                        if (fullText.classList.contains("full")) {
+                            changeText.innerText = "Thu gọn";
+                        } else {
+                            changeText.innerText = "Xem thêm";
+                        }
+                    };
                 });
             }
         },

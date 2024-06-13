@@ -204,6 +204,19 @@ img {
         color: #0772b5;
         font-size: 13px;
     }
+    &--quaternary {
+        padding: 10px 16px;
+        background-color: #0772b5;
+        color: #fff;
+        font-size: 13px;
+    }
+
+    &--quinary {
+        padding: 8px 10px;
+        background-color: #1955a6;
+        color: #fff;
+        font-size: 13px;
+    }
 }
 /*===========================================================================*/
 .fs-10 {
@@ -310,6 +323,9 @@ img {
 }
 .text-blue-195 {
     color: #1955a6;
+}
+.text-blue-70c {
+    color: #70c8ff;
 }
 .text-green-73 {
     color: #73be44;

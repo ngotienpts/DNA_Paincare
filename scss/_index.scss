@@ -53,8 +53,10 @@
     background-size: cover;
 
     &__left {
+        padding: 40px 0;
     }
     &__right {
+        margin-top: auto;
         .bg {
             width: auto;
             height: 400px;
