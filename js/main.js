@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var backTop = document.querySelector("#back-top");
 
     // language
-    var langContainer = document.querySelector(".js__languageContainer");
+    var langContainers = document.querySelectorAll(".js__languageContainer");
 
     // slide
     var oneSlides = document.querySelectorAll(".js__oneSlidesContainer");
@@ -20,6 +20,19 @@ document.addEventListener("DOMContentLoaded", function () {
     // show full text
     const fullTexts = document.querySelectorAll(".js__fullTextContainer");
 
+    // fancybox
+    var fancyboxes = document.querySelectorAll(".fancybox-full");
+
+    // show sub menu
+    var dropdownSubMenu = document.querySelectorAll(".js__dropDown");
+    var subMenu = document.querySelector(".js__clickShowMenuMb");
+
+    // search mb
+    var searchMbs = document.querySelectorAll(".js__searchMb");
+
+    // navbar mb
+    var navbarMb = document.querySelector(".js__navbarMenuMb");
+
     const app = {
         // su ly cac su kien
         handleEvent: function () {
@@ -34,25 +47,28 @@ document.addEventListener("DOMContentLoaded", function () {
             }
 
             // language
-            if (langContainer) {
-                var languageDefault = langContainer.querySelector(
-                    ".js__languageDefault"
-                );
-                var languageItems =
-                    langContainer.querySelectorAll(".js__languageItem");
-
-                languageDefault.onclick = function () {
-                    this.classList.toggle("active");
-                };
-
-                languageItems.forEach((languageItem) => {
-                    var children = languageDefault.querySelector(
-                        ".js__languageDefaultText"
+            if (langContainers) {
+                langContainers.forEach((langContainer) => {
+                    var languageDefault = langContainer.querySelector(
+                        ".js__languageDefault"
                     );
-                    languageItem.onclick = function () {
-                        children.innerHTML = languageItem.innerHTML;
-                        languageDefault.classList.remove("active");
+
+                    var languageItems =
+                        langContainer.querySelectorAll(".js__languageItem");
+
+                    languageDefault.onclick = function () {
+                        this.classList.toggle("active");
                     };
+
+                    languageItems.forEach((languageItem) => {
+                        var children = languageDefault.querySelector(
+                            ".js__languageDefaultText"
+                        );
+                        languageItem.onclick = function () {
+                            children.innerHTML = languageItem.innerHTML;
+                            languageDefault.classList.remove("active");
+                        };
+                    });
                 });
             }
 
@@ -108,6 +124,88 @@ document.addEventListener("DOMContentLoaded", function () {
                             changeText.innerText = "Xem thêm";
                         }
                     };
+                });
+            }
+            // show sub menu
+            if (subMenu) {
+                var closeSubMenu = document.querySelector(".js__closeSubMenu");
+                var overlay = document.querySelector(".js__overlay");
+                var parentBox = subMenu.parentElement;
+
+                subMenu.onclick = function () {
+                    this.parentElement.classList.add("active");
+                    document.querySelector("body").style.overflow = "hidden";
+                };
+                closeSubMenu.onclick = function () {
+                    parentBox.classList.remove("active");
+                    document.querySelector("body").style.overflow = "auto";
+                };
+                overlay.onclick = function () {
+                    parentBox.classList.remove("active");
+                    document.querySelector("body").style.overflow = "auto";
+                };
+            }
+
+            // dropdown sub menu
+            dropdownSubMenu &&
+                dropdownSubMenu.forEach((item) => {
+                    var parent = item.parentElement;
+                    var nextEle = parent.querySelector(".js__listSubMenu");
+                    item.onclick = function () {
+                        parent.classList.toggle("active");
+                        if (nextEle.style.maxHeight) {
+                            nextEle.style.maxHeight = null;
+                        } else {
+                            nextEle.style.maxHeight =
+                                nextEle.scrollHeight + "px";
+                        }
+                    };
+                });
+
+            // search mb
+            if (searchMbs) {
+                searchMbs.forEach((searchMb) => {
+                    var closeSearchMb =
+                        document.querySelector(".js__closeSearchMb");
+                    var formSearchMb =
+                        document.querySelector(".js__formSearchMb");
+                    searchMb.onclick = function () {
+                        formSearchMb.classList.add("active");
+                    };
+                    closeSearchMb.onclick = function () {
+                        formSearchMb.classList.remove("active");
+                    };
+                });
+            }
+
+            // navbar mb
+            if (navbarMb) {
+                const container = navbarMb.querySelector(".js__navbarMb");
+                const scrollBtn = navbarMb.querySelector(".js__navbarIcon");
+
+                let scrollAmount = 0;
+                let scrollPosition = 0;
+
+                scrollBtn.addEventListener("click", function () {
+                    const scrollDistance = 100;
+                    scrollAmount = scrollPosition + scrollDistance;
+                    scrollAmount = Math.min(
+                        scrollAmount,
+                        container.scrollWidth - container.clientWidth
+                    );
+                    container.scrollTo({
+                        left: scrollAmount,
+                        behavior: "smooth",
+                    });
+                    scrollPosition = scrollAmount;
+                });
+            }
+        },
+        // fancybox
+        fancybox: function () {
+            if (fancyboxes) {
+                fancyboxes.forEach(function (fancybox) {
+                    $(".fancybox-full a").fancybox();
                 });
             }
         },
@@ -195,6 +293,8 @@ document.addEventListener("DOMContentLoaded", function () {
             this.handleEvent();
             // window scroll
             this.windowScroll();
+            // fancybox
+            this.fancybox();
             // one slide
             this.sliderOneItems();
             // slider nhà đầu tư
