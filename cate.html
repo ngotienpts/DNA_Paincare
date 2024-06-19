@@ -92,7 +92,6 @@
         <!-- end font -->
         <link rel="stylesheet" href="./lib/swiper/swiper-bundle.min.css" />
         <link rel="stylesheet" href="./css/style.css" />
-        <link rel="stylesheet" href="./css/responsive.css" />
         <script src="./lib/jquery/jquery-3.7.1.min.js"></script>
     </head>
 
@@ -100,7 +99,7 @@
         <!-- header -->
         <header id="header" class="header relative js__stickyHeader">
             <!-- pc -->
-            <div class="header-pc d-3lx-block d-lg-none relative z-50">
+            <div class="header-pc d-3xl-block d-lg-none relative z-50">
                 <!-- top -->
                 <div class="header-top bg-blue-eff w-wrapper py-20 font-arial">
                     <div
@@ -732,6 +731,41 @@
                 </div>
              </section>
             <!-- end primary -->
+            <!-- detail navbar mb -->
+            <div class="detail-navbar relative z-50 w-wrapper py-20 bg-white d-3xl-none d-sm-block">
+                <ul class="detail-navbar__container navbar w-1140 d-3xl-flex items-center fs-14 gap-24">
+                    <!-- item -->
+                    <li class="navbar-item">
+                        <a href="#" class="navbar-link">
+                            <img src="./images/svg/home-blue.svg" alt="">
+                        </a>
+                    </li>
+                    <!-- end item -->
+                    <!-- item -->
+                    <li class="navbar-item">
+                        <a href="#" class="navbar-link">Bệnh điều trị</a>
+                    </li>
+                    <!-- end item -->
+                    
+                    <!-- item -->
+                    <li class="navbar-item navbar-item--more">
+                        <a href="#" class="navbar-link text-green-73">Đau đầu mất ngủ</a>
+                        <ul class="navbar-dropdown">
+                            <li class="navbar-dropdown__item">
+                                <a href="#" class="navbar-dropdown__link">Cate 1</a>
+                            </li>
+                            <li class="navbar-dropdown__item">
+                                <a href="#" class="navbar-dropdown__link">Cate 1</a>
+                            </li>
+                            <li class="navbar-dropdown__item">
+                                <a href="#" class="navbar-dropdown__link">Cate 1</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- end item -->
+                </ul>
+            </div>
+            <!-- end detail navbar mb -->
             <!-- secondary -->
              <section class="cate-secondary w-wrapper relative z-20 over-hidden mt-30">
                 <div class="cate-secondary__container d-3xl-flex gap-24 w-1140">
@@ -788,6 +822,16 @@
                                             <a href="#">Vực dậy nghề muối, tăng thu
                                                 nhập cho diêm dân</a>
                                         </h3>
+                                        <div class="d-3xl-none d-sm-block">
+                                            <p class="article__des fix-text4 fs-15 font-arial text-gray-44 lh-160  mt-12">
+                                                Là đất nước sản xuất muối tiềm năng,
+                                                nhưng mỗi năm Việt Nam vẫn phải nhập
+                                                khẩu muối để đáp ứng nhu cầu trong nước.
+                                                Muối nội địa có giá thành cao, chất
+                                                lượng thấp, rất khó cạnh tranh với muối
+                                                nhập khẩu nên khó tiêu thụ.
+                                            </p>
+                                        </div>
                                     </div>
                                     <!-- end content -->
                                 </div>
@@ -807,6 +851,16 @@
                                             <a href="#">Vực dậy nghề muối, tăng thu
                                                 nhập cho diêm dân</a>
                                         </h3>
+                                        <div class="d-3xl-none d-sm-block">
+                                            <p class="article__des fix-text4 fs-15 font-arial text-gray-44 lh-160  mt-12">
+                                                Là đất nước sản xuất muối tiềm năng,
+                                                nhưng mỗi năm Việt Nam vẫn phải nhập
+                                                khẩu muối để đáp ứng nhu cầu trong nước.
+                                                Muối nội địa có giá thành cao, chất
+                                                lượng thấp, rất khó cạnh tranh với muối
+                                                nhập khẩu nên khó tiêu thụ.
+                                            </p>
+                                        </div>
                                     </div>
                                     <!-- end content -->
                                 </div>
@@ -1369,7 +1423,7 @@
             </div>
 
             <div class="footer-fixed">
-                <div >
+                <div class="footer-fixed__inner">
                     <!-- back top -->
                     <div id="back-top" class="back-top btn btn--primary">
                         <img src="./images/svg/up-arrow-w.svg" alt="" class="mr-4">

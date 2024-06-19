@@ -22,6 +22,12 @@
     font-weight: 500;
     color: #1955a6;
 }
+.heading-quaternary {
+    font-size: 36px;
+    font-weight: bold;
+    color: #1955a6;
+    line-height: 160%;
+}
 .booking {
     &-img {
         width: 18px;
@@ -47,6 +53,30 @@
         content: "\2192";
     }
 }
+.arrow-secondary {
+    .swiper-button-next,
+    .swiper-rtl .swiper-button-prev {
+        right: 0;
+        left: auto;
+    }
+    .swiper-button-prev,
+    .swiper-rtl .swiper-button-next {
+        left: 0;
+        right: auto;
+    }
+    .swiper-button-next:after,
+    .swiper-button-prev:after {
+        font-size: 16px;
+    }
+    .swiper-button-next,
+    .swiper-button-prev {
+        width: 40px;
+        height: 40px;
+        background: #d7efff;
+        border-radius: 999px;
+        color: #0772b5;
+    }
+}
 .main-primary {
     background-image: url("../images/bg_1.png");
     background-repeat: no-repeat;
@@ -67,7 +97,7 @@
 .main-secondary {
     padding-top: 60px;
     padding-bottom: 60px;
-    &__content {
+    &__container {
         .article {
             border: 1px solid #72be44;
         }
@@ -79,6 +109,12 @@
                 top: -1px;
             }
         }
+    }
+    .swiper-horizontal > .swiper-pagination-bullets,
+    .swiper-pagination-bullets.swiper-pagination-horizontal,
+    .swiper-pagination-custom,
+    .swiper-pagination-fraction {
+        bottom: 20px;
     }
 }
 
@@ -156,31 +192,30 @@
     padding-bottom: 60px;
     &__content {
         grid-gap: 40px 30px;
-
-        .article-img {
-            border-top-right-radius: 80px;
-            background-color: #eff9ff;
-            overflow: hidden;
-            .image-1 {
-                max-height: 260px;
-                width: auto;
-            }
-            .image-2 {
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                width: 77px;
-                height: auto;
-            }
+    }
+    .article-img {
+        border-top-right-radius: 80px;
+        background-color: #eff9ff;
+        overflow: hidden;
+        .image-1 {
+            // max-height: 260px;
+            // width: auto;
         }
+        .image-2 {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 77px;
+            height: auto;
+        }
+    }
 
-        .article-list {
-            padding-left: 20px;
-            list-style: disc;
+    .article-list {
+        padding-left: 20px;
+        list-style: disc;
 
-            li {
-                margin-top: 10px;
-            }
+        li {
+            margin-top: 10px;
         }
     }
 }
@@ -252,4 +287,14 @@
             }
         }
     }
+}
+.swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background: #1955a6;
+    opacity: 1;
+}
+.swiper-pagination-bullet-active {
+    background: #fff;
+    border: 1px solid #1955a6;
 }

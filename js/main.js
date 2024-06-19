@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // slide
     var oneSlides = document.querySelectorAll(".js__oneSlidesContainer");
+    var fourSlides = document.querySelectorAll(".js__fourSlidesContainer");
 
     // sticky header
     var stickyHeaderPC = document.querySelector(".js__stickyHeader");
@@ -222,7 +223,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         slidesPerGroup: 1,
                         effect: "fade",
                         autoHeight: true,
-                        // loop: true,
+                        loop: true,
                         fadeEffect: { crossFade: true },
                         // autoplay: {
                         //     delay: 5000,
@@ -241,33 +242,48 @@ document.addEventListener("DOMContentLoaded", function () {
                 });
             }
         },
-        // slider nhà đầu tư
-        sliderInvestos: function () {
-            var swiper5 = new Swiper(".mySwiperInvestor", {
-                slidesPerView: 3,
-                grid: {
-                    rows: 2,
-                    fill: "rows",
-                },
-                navigation: {
-                    nextEl: ".swiper-button-next3",
-                    prevEl: ".swiper-button-prev3",
-                },
-                pagination: {
-                    el: ".swiper-pagination3",
-                    clickable: true,
-                },
-                hideOnClick: true,
-                breakpoints: {
-                    768: {
-                        slidesPerView: 4,
-                    },
-                    1024: {
-                        slidesPerView: 6,
-                    },
-                },
-            });
+        sliderFourItems: function () {
+            if (fourSlides) {
+                fourSlides.forEach((item) => {
+                    var slider = item.querySelector(".js__fourSlide");
+                    var next = item.querySelector(".swiper-button-next");
+                    var prev = item.querySelector(".swiper-button-prev");
+                    var pagi = item.querySelector(".swiper-pagination");
+                    new Swiper(slider, {
+                        slidesPerView: 1,
+                        spaceBetween: 30,
+                        slidesPerGroup: 1,
+                        autoHeight: true,
+                        loop: true,
+                        navigation: {
+                            nextEl: next || null,
+                            prevEl: prev || null,
+                        },
+                        pagination: {
+                            el: pagi,
+                            clickable: true,
+                        },
+                        breakpoints: {
+                            640: {
+                                slidesPerView: 2,
+                                spaceBetween: 30,
+                            },
+                            768: {
+                                slidesPerView: 2,
+                            },
+                            1024: {
+                                slidesPerView: 3,
+                            },
+                            1200: {
+                                slidesPerView: 4,
+                            },
+                        },
+                    });
+                });
+            }
         },
+        // slider nhà đầu tư
+        sliderInvestos: function () {},
         // scroll top
         scrollFunc: function () {
             if (stickyHeaderPC) {
@@ -297,6 +313,8 @@ document.addEventListener("DOMContentLoaded", function () {
             this.fancybox();
             // one slide
             this.sliderOneItems();
+            // four slide
+            this.sliderFourItems();
             // slider nhà đầu tư
             this.sliderInvestos();
         },

@@ -129,6 +129,7 @@
 
     & iframe {
         margin-bottom: 24px;
+        width: 100%;
     }
 
     &--secondary {
@@ -476,6 +477,24 @@
         }
         & a:hover {
             color: #1955a6;
+        }
+    }
+}
+.detail-navbar {
+    .navbar-item {
+        &:first-child {
+            flex-shrink: 0;
+        }
+        &:nth-child(2) {
+            padding-left: 24px;
+            border-left: 1px solid #e5e5e5;
+            position: relative;
+        }
+        &:last-child {
+            .navbar-dropdown {
+                right: 0;
+                left: 0;
+            }
         }
     }
 }
