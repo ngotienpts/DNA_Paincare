@@ -20,7 +20,8 @@
             li {
                 margin-top: 12px;
                 p {
-                    font-weight: lighter;
+                    font-weight: 300;
+                    margin-bottom: 4px;
                     &:first-child {
                         font-weight: bold;
                     }
@@ -60,6 +61,10 @@
         padding: 52px 0;
         max-width: 800px;
         margin: auto;
+
+        .related-news {
+            padding: 0;
+        }
     }
 }
 
@@ -213,7 +218,9 @@
 
 .detail-sick-primary {
     &__tab {
-        flex-wrap: wrap;
+        overflow: auto;
+        white-space: nowrap;
+        flex-wrap: nowrap;
         gap: 20px 40px;
         height: 65px;
         .tab-item {
@@ -227,6 +234,42 @@
                 color: #1955a6;
                 border-bottom-color: #1955a6;
             }
+        }
+        &-container {
+            position: relative;
+        }
+        &-icon {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 2rem;
+            height: 100%;
+            background: linear-gradient(270deg, #b0e2ff 28.12%, #eff9ff 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+        /* width */
+        &::-webkit-scrollbar {
+            width: 0;
+            height: 0;
+        }
+
+        /* Track */
+        &::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+            background: transparent;
+        }
+
+        /* Handle on hover */
+        &::-webkit-scrollbar-thumb:hover {
+            background: transparent;
         }
     }
 
@@ -244,6 +287,28 @@
             height: 40px;
             border-radius: 50%;
         }
+    }
+
+    &__text1 {
+        display: inline-block;
+        position: relative;
+        padding-right: 20px;
+        &::before {
+            position: absolute;
+            content: "";
+            right: 10px;
+            top: 0;
+            width: 1px;
+            height: 100%;
+            background-color: #1955a6;
+        }
+    }
+    &__text2 {
+        display: inline-block;
+    }
+
+    .btn {
+        flex-shrink: 0;
     }
 }
 
@@ -419,7 +484,6 @@
     .detail-tags {
         display: flex;
         overflow: auto;
-        white-space: nowrap;
         flex-wrap: wrap;
         align-items: center;
     }

@@ -93,7 +93,6 @@
         <link rel="stylesheet" href="./lib/swiper/swiper-bundle.min.css" />
         <link rel="stylesheet" href="./lib/fancybox/jquery.fancybox.min.css" />
         <link rel="stylesheet" href="./css/style.css" />
-        <link rel="stylesheet" href="./css/responsive.css" />
         <script src="./lib/jquery/jquery-3.7.1.min.js"></script>
     </head>
 
@@ -721,13 +720,24 @@
         <main id="main" class="main">
             <!-- primary -->
              <section class="introduce-info-primary relative z-20 over-hidden">
-                 <div class="introduce-info-primary__bg">
-                    <img src="./images/bg_2.5.png" alt="" class="image-2">
+                 <div class="image-1">
+                    <img src="./images/svg/bg-cate-1.svg" alt="" class="d-3xl-block d-sm-none">
+                    <img src="./images/svg/bg-cate-2.svg" alt="" class="d-3xl-none d-sm-block">
+                 </div>
+                 <div class="image-2">
+                    <img src="./images/bg_2.5.png" alt="" class="d-3xl-block d-sm-none">
+                    <img src="./images/_R6_4271 3.png" alt="" class="d-3xl-none d-sm-block">
                  </div>
                 <div class="introduce-info-primary__container w-1140">
                     <div class="introduce-info-primary__inner w-40">
                         <h1 class="introduce-info-primary__title1 fs-24 fw-600 text-white">Trang thiết bị hiện đại</h1>
                         <h2 class="introduce-info-primary__title2 fs-40 fw-300 text-green-73">Tiêu chuẩn quốc tế</h2>
+                        <div class="mt-24 booking d-3xl-none d-sm-block">
+                            <a href="#" class="btn">
+                                <span class="booking-text d-3xl-inline mr-10">Đặt lịch ngay</span>
+                                <img src="./images/svg/next-arrow-w.svg" class="booking-img" alt="">
+                            </a>
+                        </div>
                     </div>
                 </div>
              </section>
@@ -1006,75 +1016,71 @@
                     </h2>
                     <!-- end heading -->
 
-                    <!-- content -->
-                     <div class="introduce-info-senary__content mt-30">
+                    <!-- slide -->
+                     <div class="introduce-info-senary__slide swiper-gallery mt-30  js__galleryTabSwiper">
                         <!-- tab -->
-                        <div class="introduce-info-senary__tab d-3xl-flex items-center px-30 py-20 border-10 bg-blue-eff">
-                            <span class="tab-item js__tabItem">Tất cả</span>
-                            <span class="tab-item js__tabItem active">Phòng khám</span>
-                            <span class="tab-item js__tabItem">Trang thiết bị</span>
+                        <div thumbsSlider="" class="swiper-tab swiper js__tabSwipper px-30 border-10 bg-blue-eff">
+                            <div class="swiper-wrapper">
+                                <!-- slide -->
+                                <div class="swiper-slide">Tất cả</div>
+                                <!-- end slide -->
+                                <!-- slide -->
+                                <div class="swiper-slide">Phòng khám</div>
+                                <!-- end slide -->
+                                <!-- slide -->
+                                <div class="swiper-slide">Trang thiết bị</div>
+                                <!-- end slide -->
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
                         </div>
                         <!-- end tab -->
-
-                        <!-- pane -->
-                         <div class="introduce-info-senary__pane mt-20">
-                            <div class="tab-pane js__tabPane hidden">
-                                1
-                            </div>
-                            <div class="tab-pane js__tabPane hidden active">
-                                <div class="image-container js__imageFull">
-                                    <div class="image-item">
-                                        <a data-fancybox="gallery" href="./images/2.jpg" data-caption="VNG từng dự kiến IPO tại Mỹ. Ảnh Vneconomy">
-                                            <img src="./images/2.jpg" alt="">
-                                        </a>  
+                        
+                        <!-- content -->
+                        <div class="swiper-content swiper js__contentSwiper mt-20">
+                            <div class="swiper-wrapper">
+                                <!-- slide -->
+                                <div class="swiper-slide">
+                                    <div class="image-container js__imageFull">
+                                        <div class="image-item">
+                                            <a data-fancybox="gallery" href="./images/2.jpg" data-caption="VNG từng dự kiến IPO tại Mỹ. Ảnh Vneconomy">
+                                                <img src="./images/2.jpg" alt="">
+                                            </a>  
+                                        </div>
+                                        <div class="image-item">
+                                            <a data-fancybox="gallery" href="./images/2.jpg" data-caption="VNG từng dự kiến IPO tại Mỹ. Ảnh Vneconomy">
+                                                <img src="./images/3.jpg" alt="">
+                                            </a>  
+                                        </div>
+                                        <div class="image-item">
+                                            <a data-fancybox="gallery" href="./images/2.jpg" data-caption="VNG từng dự kiến IPO tại Mỹ. Ảnh Vneconomy">
+                                                <img src="./images/2.jpg" alt="">
+                                            </a>  
+                                        </div>
+                                        <div class="image-item">
+                                            <a data-fancybox="gallery" href="./images/2.jpg" data-caption="VNG từng dự kiến IPO tại Mỹ. Ảnh Vneconomy">
+                                                <img src="./images/4.jpg" alt="">
+                                            </a>  
+                                        </div>
+                                       
                                     </div>
-                                    <div class="image-item">
-                                        <a data-fancybox="gallery" href="./images/2.jpg" data-caption="VNG từng dự kiến IPO tại Mỹ. Ảnh Vneconomy">
-                                            <img src="./images/3.jpg" alt="">
-                                        </a>  
-                                    </div>
-                                    <div class="image-item">
-                                        <a data-fancybox="gallery" href="./images/2.jpg" data-caption="VNG từng dự kiến IPO tại Mỹ. Ảnh Vneconomy">
-                                            <img src="./images/2.jpg" alt="">
-                                        </a>  
-                                    </div>
-                                    <div class="image-item">
-                                        <a data-fancybox="gallery" href="./images/2.jpg" data-caption="VNG từng dự kiến IPO tại Mỹ. Ảnh Vneconomy">
-                                            <img src="./images/4.jpg" alt="">
-                                        </a>  
-                                    </div>
-                                   
                                 </div>
-                            </div>
-                            <div class="tab-pane js__tabPane hidden">
-                                <div class="image-container js__imageFull">
-                                    <div class="image-item">
-                                        <a data-fancybox="gallery" href="./images/2.jpg" data-caption="VNG từng dự kiến IPO tại Mỹ. Ảnh Vneconomy">
-                                            <img src="./images/2.jpg" alt="">
-                                        </a>  
-                                    </div>
-                                    <div class="image-item">
-                                        <a data-fancybox="gallery" href="./images/2.jpg" data-caption="VNG từng dự kiến IPO tại Mỹ. Ảnh Vneconomy">
-                                            <img src="./images/3.jpg" alt="">
-                                        </a>  
-                                    </div>
-                                    <div class="image-item">
-                                        <a data-fancybox="gallery" href="./images/2.jpg" data-caption="VNG từng dự kiến IPO tại Mỹ. Ảnh Vneconomy">
-                                            <img src="./images/2.jpg" alt="">
-                                        </a>  
-                                    </div>
-                                    <div class="image-item">
-                                        <a data-fancybox="gallery" href="./images/2.jpg" data-caption="VNG từng dự kiến IPO tại Mỹ. Ảnh Vneconomy">
-                                            <img src="./images/4.jpg" alt="">
-                                        </a>  
-                                    </div>
-                                   
+                                <!-- end slide -->
+                                <!-- slide -->
+                                <div class="swiper-slide">
+                                    2
                                 </div>
+                                <!-- end slide -->
+                                <!-- slide -->
+                                <div class="swiper-slide">
+                                    3
+                                </div>
+                                <!-- end slide -->
                             </div>
-                         </div>
-                        <!-- end pane -->
+                        </div>
+                        <!-- end content -->
                      </div>
-                    <!-- end content -->
+                    <!-- end slide -->
                 </div>
              </section>
             <!-- end senary -->

@@ -7,7 +7,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // slide
     var oneSlides = document.querySelectorAll(".js__oneSlidesContainer");
+    var threeSlides = document.querySelectorAll(".js__threeSlidesContainer");
     var fourSlides = document.querySelectorAll(".js__fourSlidesContainer");
+    var galleryTabSlide = document.querySelector(".js__galleryTabSwiper");
 
     // sticky header
     var stickyHeaderPC = document.querySelector(".js__stickyHeader");
@@ -33,6 +35,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // navbar mb
     var navbarMb = document.querySelector(".js__navbarMenuMb");
+
+    // scroll tab
+    var scrollTabContainer = document.querySelector(".js__scrollTabContainer");
 
     const app = {
         // su ly cac su kien
@@ -201,6 +206,30 @@ document.addEventListener("DOMContentLoaded", function () {
                     scrollPosition = scrollAmount;
                 });
             }
+            // scroll tab
+            if (scrollTabContainer) {
+                const container =
+                    scrollTabContainer.querySelector(".js__scrollTab");
+                const scrollBtn =
+                    scrollTabContainer.querySelector(".js__scrollTabIcon");
+
+                let scrollAmount = 0;
+                let scrollPosition = 0;
+
+                scrollBtn.addEventListener("click", function () {
+                    const scrollDistance = 100;
+                    scrollAmount = scrollPosition + scrollDistance;
+                    scrollAmount = Math.min(
+                        scrollAmount,
+                        container.scrollWidth - container.clientWidth
+                    );
+                    container.scrollTo({
+                        left: scrollAmount,
+                        behavior: "smooth",
+                    });
+                    scrollPosition = scrollAmount;
+                });
+            }
         },
         // fancybox
         fancybox: function () {
@@ -237,6 +266,46 @@ document.addEventListener("DOMContentLoaded", function () {
                         pagination: {
                             el: pagi,
                             clickable: true,
+                        },
+                    });
+                });
+            }
+        },
+        sliderThreeItems: function () {
+            if (threeSlides) {
+                threeSlides.forEach((item) => {
+                    var slider = item.querySelector(".js__threeSlide");
+                    var next = item.querySelector(".swiper-button-next");
+                    var prev = item.querySelector(".swiper-button-prev");
+                    var pagi = item.querySelector(".swiper-pagination");
+                    new Swiper(slider, {
+                        slidesPerView: 1,
+                        spaceBetween: 30,
+                        slidesPerGroup: 1,
+                        autoHeight: true,
+                        loop: true,
+                        navigation: {
+                            nextEl: next || null,
+                            prevEl: prev || null,
+                        },
+                        pagination: {
+                            el: pagi,
+                            clickable: true,
+                        },
+                        breakpoints: {
+                            640: {
+                                slidesPerView: 2,
+                                spaceBetween: 30,
+                            },
+                            768: {
+                                slidesPerView: 2,
+                            },
+                            1024: {
+                                slidesPerView: 3,
+                            },
+                            1200: {
+                                slidesPerView: 3,
+                            },
                         },
                     });
                 });
@@ -282,8 +351,54 @@ document.addEventListener("DOMContentLoaded", function () {
                 });
             }
         },
-        // slider nhà đầu tư
-        sliderInvestos: function () {},
+
+        sliderGalleryTabItem: function () {
+            if (galleryTabSlide) {
+                var tabSlider =
+                    galleryTabSlide.querySelector(".js__tabSwipper");
+                var contentSlider =
+                    galleryTabSlide.querySelector(".js__contentSwiper");
+                var next = galleryTabSlide.querySelector(".swiper-button-next");
+                var prev = galleryTabSlide.querySelector(".swiper-button-prev");
+
+                var swiper = new Swiper(tabSlider, {
+                    spaceBetween: 40,
+                    slidesPerView: "auto",
+                    freeMode: true,
+                    freeModeMomentum: false,
+                    watchSlidesProgress: true,
+                    scrollbar: {
+                        el: ".swiper-scrollbar",
+                        draggable: true,
+                    },
+                });
+
+                var swiper2 = new Swiper(contentSlider, {
+                    spaceBetween: 10,
+                    autoHeight: true,
+                    navigation: {
+                        nextEl: next || null,
+                        prevEl: prev || null,
+                    },
+                    thumbs: {
+                        swiper: swiper,
+                    },
+                });
+
+                if (next) {
+                    next.addEventListener("click", function () {
+                        if (
+                            swiper.activeIndex >=
+                            swiper.slides.length - swiper.params.slidesPerView
+                        ) {
+                            swiper.slideTo(swiper.slides.length - 1);
+                        } else {
+                            swiper.slideNext();
+                        }
+                    });
+                }
+            }
+        },
         // scroll top
         scrollFunc: function () {
             if (stickyHeaderPC) {
@@ -313,10 +428,12 @@ document.addEventListener("DOMContentLoaded", function () {
             this.fancybox();
             // one slide
             this.sliderOneItems();
+            // three slide
+            this.sliderThreeItems();
             // four slide
             this.sliderFourItems();
-            // slider nhà đầu tư
-            this.sliderInvestos();
+            // gallery slide
+            this.sliderGalleryTabItem();
         },
     };
 
