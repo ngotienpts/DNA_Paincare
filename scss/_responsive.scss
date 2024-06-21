@@ -1,3 +1,15 @@
+@media (min-width: 2100px) {
+    .introduce-info-primary {
+        .image-1 {
+            img {
+                height: 100%;
+                width: auto;
+                position: absolute;
+                left: 20%;
+            }
+        }
+    }
+}
 // max width 1536px
 @media (max-width: 1536px) {
     .d-2xl-none {
@@ -59,6 +71,11 @@
     // --------------------------------------------------------------------header
 
     // --------------------------------------------------------------------index
+    .introduce-info-primary {
+        &__container {
+            padding: 20px;
+        }
+    }
 
     // --------------------------------------------------------------------cate
 
@@ -87,6 +104,7 @@
     }
 
     // --------------------------------------------------------------------index
+
     .main-secondary {
         padding-left: 20px;
         padding-right: 20px;
@@ -185,6 +203,25 @@
     }
 }
 
+// max width 992px
+@media (max-width: 992px) {
+    // --------------------------------------------------------------------header
+    // --------------------------------------------------------------------index
+    .main-primary {
+        &__container {
+            display: block;
+        }
+        &__right {
+            .bg {
+                height: 300px;
+                margin: auto;
+            }
+        }
+    }
+    // --------------------------------------------------------------------cate
+    // --------------------------------------------------------------------detail
+    // --------------------------------------------------------------------footer
+}
 // max width 768px
 @media (max-width: 768px) {
     .d-md-none {
@@ -210,17 +247,6 @@
         font-size: 30px;
     }
     // --------------------------------------------------------------------index
-    .main-primary {
-        &__container {
-            display: block;
-        }
-        &__right {
-            .bg {
-                height: 300px;
-                margin: auto;
-            }
-        }
-    }
 
     .main-secondary {
         &__content {
@@ -789,6 +815,11 @@
         .image-1 {
             left: 0;
             bottom: auto;
+
+            img {
+                height: auto;
+                width: 100%;
+            }
         }
         .image-2 {
             top: auto;
