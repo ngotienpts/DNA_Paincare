@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Tập hợp tất cả các phần tử cần sử dụng
     const backTop = document.querySelector("#back-top");
     const langContainers = document.querySelectorAll(".js__languageContainer");
+    const autoSlides = document.querySelectorAll(".js__autoSlideContainer");
     const oneSlides = document.querySelectorAll(".js__oneSlidesContainer");
     const threeSlides = document.querySelectorAll(".js__threeSlidesContainer");
     const fourSlides = document.querySelectorAll(".js__fourSlidesContainer");
@@ -225,6 +226,24 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
+    // khởi tạo slider với nhiều item có width auto
+    function initSliderAutoItems() {
+        if (autoSlides) {
+            autoSlides.forEach((item) => {
+                var slider = item.querySelector(".js__swiperAuto");
+                var next = item.querySelector(".swiper-button-next");
+                var prev = item.querySelector(".swiper-button-prev");
+                new Swiper(slider, {
+                    slidesPerView: "auto",
+                    spaceBetween: 0,
+                    navigation: {
+                        nextEl: next || null,
+                        prevEl: prev || null,
+                    },
+                });
+            });
+        }
+    }
     // Khởi tạo slider với một item
     function initSliderOneItems() {
         if (oneSlides) {
@@ -398,6 +417,7 @@ document.addEventListener("DOMContentLoaded", function () {
         handleNavbarMb();
         handleScrollTab();
         initFancybox();
+        initSliderAutoItems();
         initSliderOneItems();
         initSliderThreeItems();
         initSliderFourItems();
