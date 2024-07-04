@@ -351,6 +351,29 @@
     }
     &__pane {
     }
+
+    &-listText {
+        justify-content: center;
+        padding: 15px 0;
+        border-bottom: 1px solid #e0e0e0;
+        flex-wrap: wrap;
+
+        .tab-item-2 {
+            font-size: 20px;
+            font-weight: 500;
+            cursor: pointer;
+            color: #c4c4c4;
+
+            &.active {
+                color: #73be44;
+            }
+            
+            &:hover {
+                color: #73be44;
+
+            }
+        }
+    }
 }
 .tab-pane {
     &.hidden {
@@ -501,7 +524,8 @@
             border-bottom: 2px solid transparent;
         }
 
-        .swiper-slide-thumb-active {
+        .swiper-slide-thumb-active
+         {
             color: #1955a6;
             border-bottom-color: #1955a6;
         }
