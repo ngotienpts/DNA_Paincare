@@ -1968,6 +1968,7 @@ select {
 }
 .main-secondary__container .article {
   border: 1px solid #72be44;
+  height: 100%;
 }
 .main-secondary__container .article-img .image-2 {
   width: 77px;

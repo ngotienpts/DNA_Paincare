@@ -226,6 +226,26 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
+
+    function setEqualHeightForSwiperSlides(slider) {
+        var slides = slider.querySelectorAll('.swiper-slide');
+        var maxHeight = 0;
+    
+        // Tính chiều cao lớn nhất
+        slides.forEach(function(slide) {
+            slide.style.height = ''; // Reset chiều cao để tính toán lại
+            var slideHeight = slide.offsetHeight;
+            if (slideHeight > maxHeight) {
+                maxHeight = slideHeight;
+            }
+        });
+    
+        // Áp dụng chiều cao lớn nhất cho tất cả các slide
+        slides.forEach(function(slide) {
+            slide.style.height = maxHeight + 'px';
+        });
+    }
+
     // khởi tạo slider với nhiều item có width auto
     function initSliderAutoItems() {
         if (autoSlides) {
@@ -318,7 +338,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     slidesPerView: 1,
                     spaceBetween: 30,
                     slidesPerGroup: 1,
-                    autoHeight: true,
+                    autoHeight: false,
                     loop: true,
                     navigation: {
                         nextEl: next || null,
@@ -334,6 +354,18 @@ document.addEventListener("DOMContentLoaded", function () {
                         1024: { slidesPerView: 3 },
                         1200: { slidesPerView: 4 },
                     },
+                    on: {
+                        init: function() {
+                            setTimeout(function() {
+                                setEqualHeightForSwiperSlides(slider);
+                            }, 100); // Đặt độ trễ để đảm bảo các slide đã được khởi tạo
+                        },
+                        resize: function() {
+                            setTimeout(function() {
+                                setEqualHeightForSwiperSlides(slider);
+                            }, 100); // Đặt độ trễ để đảm bảo các slide đã được khởi tạo
+                        }
+                    }
                 });
             });
         }
