@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const oneSlides = document.querySelectorAll(".js__oneSlidesContainer");
     const threeSlides = document.querySelectorAll(".js__threeSlidesContainer");
     const fourSlides = document.querySelectorAll(".js__fourSlidesContainer");
-    const galleryTabSlide = document.querySelector(".js__galleryTabSwiper");
+    const galleryTabSlides = document.querySelectorAll(".js__galleryTabSwiper");
     const stickyHeaderPC = document.querySelector(".js__stickyHeader");
     const tabs = document.querySelectorAll(".js__tabContainer");
     const video169s = document.querySelectorAll(".js__video169");
@@ -341,51 +341,53 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Khởi tạo slider gallery tab
     function initSliderGalleryTabItem() {
-        if (galleryTabSlide) {
-            var tabSlider = galleryTabSlide.querySelector(".js__tabSwipper");
-            var contentSlider =
-                galleryTabSlide.querySelector(".js__contentSwiper");
-            var next = galleryTabSlide.querySelector(".swiper-button-next");
-            var prev = galleryTabSlide.querySelector(".swiper-button-prev");
-
-            var swiper = new Swiper(tabSlider, {
-                spaceBetween: 40,
-                slidesPerView: "auto",
-                freeMode: true,
-                freeModeMomentum: false,
-                watchSlidesProgress: true,
-                scrollbar: {
-                    el: ".swiper-scrollbar",
-                    draggable: true,
-                },
-            });
-
-            var swiper2 = new Swiper(contentSlider, {
-                spaceBetween: 10,
-                autoHeight: true,
-                navigation: {
-                    nextEl: next || null,
-                    prevEl: prev || null,
-                },
-                thumbs: {
-                    swiper: swiper,
-                },
-            });
-
-            handleFullTextDisplay(swiper2);
-
-            if (next) {
-                next.addEventListener("click", function () {
-                    if (
-                        swiper.activeIndex >=
-                        swiper.slides.length - swiper.params.slidesPerView
-                    ) {
-                        swiper.slideTo(swiper.slides.length - 1);
-                    } else {
-                        swiper.slideNext();
-                    }
+        if (galleryTabSlides) {
+            galleryTabSlides.forEach((galleryTabSlide)=>{
+                var tabSlider = galleryTabSlide.querySelector(".js__tabSwipper");
+                var contentSlider =
+                    galleryTabSlide.querySelector(".js__contentSwiper");
+                var next = galleryTabSlide.querySelector(".swiper-button-next");
+                var prev = galleryTabSlide.querySelector(".swiper-button-prev");
+    
+                var swiper = new Swiper(tabSlider, {
+                    spaceBetween: 40,
+                    slidesPerView: "auto",
+                    freeMode: true,
+                    freeModeMomentum: false,
+                    watchSlidesProgress: true,
+                    scrollbar: {
+                        el: ".swiper-scrollbar",
+                        draggable: true,
+                    },
                 });
-            }
+    
+                var swiper2 = new Swiper(contentSlider, {
+                    spaceBetween: 10,
+                    autoHeight: true,
+                    navigation: {
+                        nextEl: next || null,
+                        prevEl: prev || null,
+                    },
+                    thumbs: {
+                        swiper: swiper,
+                    },
+                });
+    
+                handleFullTextDisplay(swiper2);
+    
+                if (next) {
+                    next.addEventListener("click", function () {
+                        if (
+                            swiper.activeIndex >=
+                            swiper.slides.length - swiper.params.slidesPerView
+                        ) {
+                            swiper.slideTo(swiper.slides.length - 1);
+                        } else {
+                            swiper.slideNext();
+                        }
+                    });
+                }
+            })
         }
     }
 
