@@ -2044,6 +2044,48 @@ select {
   right: 0;
   transform: translateY(-50%);
 }
+.main-quaternary__slideGallery {
+  display: flex;
+}
+.main-quaternary__slideGallery .article-content {
+  width: 50%;
+  position: relative;
+}
+.main-quaternary__slideGallery .article-content .swiper-slide {
+  height: auto !important;
+  cursor: pointer;
+}
+.main-quaternary__slideGallery .article-content .swiper {
+  height: 165px;
+}
+.main-quaternary__slideGallery .article-content .swiper-slide-thumb-active .article-link {
+  color: #73BE44;
+}
+.main-quaternary__slideGallery .article-content .article-button {
+  position: absolute;
+  bottom: 30px;
+}
+.main-quaternary__slideGallery .article-content .article-link {
+  padding-left: 25px;
+}
+.main-quaternary__slideGallery .article-content .article-link::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #C4C4C4;
+}
+.main-quaternary__slideGallery .article-content .article-link:hover {
+  color: #73BE44;
+}
+.main-quaternary__slideGallery .article-thumb {
+  width: 50%;
+  flex-shrink: 0;
+}
 
 .main-quinary {
   padding-bottom: 60px;
@@ -2081,6 +2123,9 @@ select {
 }
 .main-quinary .article-list li {
   margin-top: 10px;
+}
+.main-quinary__slide .swiper-button-next, .main-quinary__slide .swiper-button-prev {
+  top: 35%;
 }
 
 .main-senary {
@@ -3300,6 +3345,13 @@ select {
     padding-bottom: 80%;
   }
 
+  .main-quaternary__slideGallery .article-content .swiper {
+    height: 150px;
+  }
+  .main-quaternary__slideGallery .article-thumb .image-wrapper {
+    padding-bottom: 72%;
+  }
+
   .main-quinary .article-img .image-2 {
     width: 60px;
   }
@@ -3351,6 +3403,19 @@ select {
     height: 300px;
     margin: auto;
   }
+
+  .main-quaternary__slideGallery {
+    display: block;
+  }
+  .main-quaternary__slideGallery .article-content {
+    width: 100%;
+  }
+  .main-quaternary__slideGallery .article-content .swiper {
+    height: 175px;
+  }
+  .main-quaternary__slideGallery .article-thumb {
+    width: 100%;
+  }
 }
 @media (max-width: 768px) {
   .d-md-none {
@@ -3393,7 +3458,7 @@ select {
   }
 
   .main-quaternary .article-content {
-    padding: 30px 20px;
+    padding: 30px 20px 50px;
   }
 
   .main-quinary__content {
@@ -3615,7 +3680,7 @@ select {
     display: block;
   }
   .main-quaternary .article-content {
-    padding: 30px 15px 40px;
+    padding: 30px 15px 60px;
   }
   .main-quaternary .article-item {
     font-size: 16px;

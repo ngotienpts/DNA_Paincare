@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const threeSlides = document.querySelectorAll(".js__threeSlidesContainer");
     const fourSlides = document.querySelectorAll(".js__fourSlidesContainer");
     const galleryTabSlides = document.querySelectorAll(".js__galleryTabSwiper");
+    const galleryVerticalSlides = document.querySelectorAll(".js__galleryVerticalSwiper");
     const stickyHeaderPC = document.querySelector(".js__stickyHeader");
     const tabs = document.querySelectorAll(".js__tabContainer");
     const video169s = document.querySelectorAll(".js__video169");
@@ -233,7 +234,7 @@ document.addEventListener("DOMContentLoaded", function () {
     
         // Tính chiều cao lớn nhất
         slides.forEach(function(slide) {
-            slide.style.height = ''; // Reset chiều cao để tính toán lại
+            slide.style.height = '';
             var slideHeight = slide.offsetHeight;
             if (slideHeight > maxHeight) {
                 maxHeight = slideHeight;
@@ -423,6 +424,55 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
+    // Khởi tạo slider gallery vertical
+    function initSliderGalleryVertical() {
+        if (galleryVerticalSlides) {
+            galleryVerticalSlides.forEach((item)=>{
+                var firstSlider = item.querySelector(".js__firstSwipper");
+                var secondSlider =
+                    item.querySelector(".js__secondSwiper");
+                var next = item.querySelector(".swiper-button-next");
+                var prev = item.querySelector(".swiper-button-prev");
+    
+                var swiper = new Swiper(firstSlider, {
+                    slidesPerView: 'auto',
+                    spaceBetween: 0,
+                    loop: true,
+                    
+                    allowTouchMove: false,
+                    direction: "vertical",
+                    // mousewheel: true,
+                    freeMode: true,
+                    watchSlidesProgress: true,
+                    
+                });
+    
+                var swiper2 = new Swiper(secondSlider, {
+                    slidesPerView: 1,
+                    slidesPerGroup: 1,
+                    spaceBetween: 10,
+                    loop: true,
+                    allowTouchMove: false,
+                    direction: "horizontal",
+                    thumbs: {
+                        swiper: swiper,
+                    },
+                    // autoplay: {
+                    //     delay: 5000,
+                    //     disableOnInteraction: false,
+                    //     pauseOnMouseEnter: true,
+                    // },
+                    navigation: {
+                        nextEl: next || null,
+                        prevEl: prev || null,
+                    },
+                  
+                });
+    
+            })
+        }
+    }
+
     // Xử lý thanh header dính
     function handleStickyHeader() {
         if (stickyHeaderPC) {
@@ -456,6 +506,7 @@ document.addEventListener("DOMContentLoaded", function () {
         initSliderThreeItems();
         initSliderFourItems();
         initSliderGalleryTabItem();
+        initSliderGalleryVertical();
         handleWindowScroll();
     }
 
