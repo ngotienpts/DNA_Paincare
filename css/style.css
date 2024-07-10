@@ -1901,9 +1901,7 @@ select {
 }
 
 .heading-primary {
-  padding-left: 14px;
   position: relative;
-  border-left: 4px solid #73be44;
 }
 
 .heading-secondary {
@@ -2092,7 +2090,7 @@ select {
   height: 165px;
 }
 .main-quaternary__slideGallery .article-content .swiper-slide-thumb-active .article-link {
-  color: #73BE44;
+  color: #73be44;
 }
 .main-quaternary__slideGallery .article-content .article-button {
   position: absolute;
@@ -2110,10 +2108,10 @@ select {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background-color: #C4C4C4;
+  background-color: #c4c4c4;
 }
 .main-quaternary__slideGallery .article-content .article-link:hover {
-  color: #73BE44;
+  color: #73be44;
 }
 .main-quaternary__slideGallery .article-thumb {
   width: 50%;
@@ -2157,7 +2155,8 @@ select {
 .main-quinary .article-list li {
   margin-top: 10px;
 }
-.main-quinary__slide .swiper-button-next, .main-quinary__slide .swiper-button-prev {
+.main-quinary__slide .swiper-button-next,
+.main-quinary__slide .swiper-button-prev {
   top: 35%;
 }
 
@@ -2861,21 +2860,21 @@ select {
 .detail-content--secondary > h2::before, .detail-content--secondary > h3::before, .detail-content--secondary > h4::before, .detail-content--secondary > h5::before, .detail-content--secondary > h6::before {
   content: "";
   position: absolute;
-  top: -2px;
+  top: 5px;
   left: 0;
   transform: skew(-10deg, 10deg);
-  width: 8px;
-  height: 48px;
+  width: 5px;
+  height: 30px;
   background-color: #1955a6;
 }
 .detail-content--secondary > h2::after, .detail-content--secondary > h3::after, .detail-content--secondary > h4::after, .detail-content--secondary > h5::after, .detail-content--secondary > h6::after {
   content: "";
   position: absolute;
-  top: 2px;
+  top: 3px;
   left: 3px;
   transform: skew(-10deg, 10deg);
-  width: 8px;
-  height: 48px;
+  width: 5px;
+  height: 30px;
   background-color: #73be44;
 }
 .detail-content--secondary ul, .detail-content--secondary p {
@@ -2985,7 +2984,8 @@ select {
   flex-shrink: 0;
 }
 
-.detail-title {
+.detail-title,
+.detail-intro {
   max-width: 800px;
   margin: 24px auto;
 }

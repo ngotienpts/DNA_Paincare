@@ -1,7 +1,7 @@
 .heading-primary {
-    padding-left: 14px;
+    // padding-left: 14px;
     position: relative;
-    border-left: 4px solid #73be44;
+    // border-left: 4px solid #73be44;
 }
 .heading-secondary {
     position: relative;
@@ -207,7 +207,7 @@
 
             .swiper-slide-thumb-active {
                 .article-link {
-                    color: #73BE44;
+                    color: #73be44;
                 }
             }
 
@@ -219,7 +219,7 @@
             .article-link {
                 padding-left: 25px;
                 &::after {
-                    content: '';
+                    content: "";
                     position: absolute;
                     top: 50%;
                     left: 0;
@@ -227,15 +227,13 @@
                     width: 8px;
                     height: 8px;
                     border-radius: 50%;
-                    background-color: #C4C4C4;
+                    background-color: #c4c4c4;
                 }
 
                 &:hover {
-                    color: #73BE44;
+                    color: #73be44;
                 }
             }
-
-            
         }
 
         .article-thumb {
@@ -293,7 +291,8 @@
     }
 
     &__slide {
-        .swiper-button-next, .swiper-button-prev {
+        .swiper-button-next,
+        .swiper-button-prev {
             top: 35%;
         }
     }
