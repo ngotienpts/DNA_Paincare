@@ -1797,6 +1797,7 @@ select {
   background-color: #1955a6;
   height: 60px;
   position: absolute;
+  z-index: 100;
   top: -100%;
   left: 0;
   right: 0;
