@@ -93,6 +93,14 @@
         }
     }
 }
+.main-primary-slide {
+    &__container {
+        img {
+            width: 100%;
+            height: auto;
+        }
+    } 
+}
 
 .main-secondary {
     padding-top: 60px;
