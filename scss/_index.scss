@@ -288,13 +288,14 @@
             height: auto;
         }
     }
-
-    .article-list {
-        padding-left: 20px;
-        list-style: disc;
-
-        li {
-            margin-top: 10px;
+    &__container {
+        .article-list {
+            padding-left: 20px;
+            list-style: disc;
+    
+            li {
+                margin-top: 10px;
+            }
         }
     }
 

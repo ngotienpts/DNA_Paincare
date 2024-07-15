@@ -2153,11 +2153,11 @@ select {
   width: 77px;
   height: auto;
 }
-.main-quinary .article-list {
+.main-quinary__container .article-list {
   padding-left: 20px;
   list-style: disc;
 }
-.main-quinary .article-list li {
+.main-quinary__container .article-list li {
   margin-top: 10px;
 }
 .main-quinary__slide .swiper-button-next,
