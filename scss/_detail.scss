@@ -68,7 +68,8 @@
     }
 }
 
-.detail-content {
+.detail-content,
+.detail-content #explus-editor {
     & > h2 {
         font-size: 36px;
         font-weight: bold;

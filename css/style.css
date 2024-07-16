@@ -2788,53 +2788,65 @@ select {
   padding: 0;
 }
 
-.detail-content > h2 {
+.detail-content > h2,
+.detail-content #explus-editor > h2 {
   font-size: 36px;
   font-weight: bold;
   margin-bottom: 24px;
 }
-.detail-content > h3 {
+.detail-content > h3,
+.detail-content #explus-editor > h3 {
   font-size: 32px;
   font-weight: bold;
   margin-bottom: 24px;
 }
-.detail-content > h4 {
+.detail-content > h4,
+.detail-content #explus-editor > h4 {
   font-size: 28px;
   font-weight: bold;
   margin-bottom: 24px;
 }
-.detail-content > h5 {
+.detail-content > h5,
+.detail-content #explus-editor > h5 {
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 24px;
 }
-.detail-content > h6 {
+.detail-content > h6,
+.detail-content #explus-editor > h6 {
   font-size: 20px;
   font-weight: bold;
   margin-bottom: 24px;
 }
-.detail-content > p, .detail-content > ul {
+.detail-content > p, .detail-content > ul,
+.detail-content #explus-editor > p,
+.detail-content #explus-editor > ul {
   font-family: "Noto Serif", serif;
   font-size: 17px;
   line-height: 160%;
   margin-bottom: 20px;
 }
-.detail-content ul {
+.detail-content ul,
+.detail-content #explus-editor ul {
   padding-left: 30px;
   list-style-type: disc;
 }
-.detail-content ul li {
+.detail-content ul li,
+.detail-content #explus-editor ul li {
   margin-bottom: 10px;
 }
-.detail-content figure {
+.detail-content figure,
+.detail-content #explus-editor figure {
   margin-bottom: 1.25rem;
 }
-.detail-content figure img {
+.detail-content figure img,
+.detail-content #explus-editor figure img {
   width: 100%;
   height: auto !important;
   margin: auto;
 }
-.detail-content figure figcaption {
+.detail-content figure figcaption,
+.detail-content #explus-editor figure figcaption {
   background: #1955a6;
   padding: 0.625rem 0.9375rem;
   font-size: 1rem;
@@ -2845,24 +2857,44 @@ select {
   font-family: "Noto Serif", serif;
   color: #fff;
 }
-.detail-content iframe {
+.detail-content iframe,
+.detail-content #explus-editor iframe {
   margin-bottom: 24px;
   width: 100%;
 }
 .detail-content--secondary h2, .detail-content--secondary h3, .detail-content--secondary h4, .detail-content--secondary h5, .detail-content--secondary h6, .detail-content--secondary ul, .detail-content--secondary p,
-.detail-content--secondary figure {
+.detail-content--secondary figure,
+.detail-content #explus-editor--secondary h2,
+.detail-content #explus-editor--secondary h3,
+.detail-content #explus-editor--secondary h4,
+.detail-content #explus-editor--secondary h5,
+.detail-content #explus-editor--secondary h6,
+.detail-content #explus-editor--secondary ul,
+.detail-content #explus-editor--secondary p,
+.detail-content #explus-editor--secondary figure {
   max-width: 800px;
   margin: auto;
 }
-.detail-content--secondary figure {
+.detail-content--secondary figure,
+.detail-content #explus-editor--secondary figure {
   margin-bottom: 24px;
 }
-.detail-content--secondary > h2, .detail-content--secondary > h3, .detail-content--secondary > h4, .detail-content--secondary > h5, .detail-content--secondary > h6 {
+.detail-content--secondary > h2, .detail-content--secondary > h3, .detail-content--secondary > h4, .detail-content--secondary > h5, .detail-content--secondary > h6,
+.detail-content #explus-editor--secondary > h2,
+.detail-content #explus-editor--secondary > h3,
+.detail-content #explus-editor--secondary > h4,
+.detail-content #explus-editor--secondary > h5,
+.detail-content #explus-editor--secondary > h6 {
   margin-bottom: 24px;
   position: relative;
   padding-left: 20px;
 }
-.detail-content--secondary > h2::before, .detail-content--secondary > h3::before, .detail-content--secondary > h4::before, .detail-content--secondary > h5::before, .detail-content--secondary > h6::before {
+.detail-content--secondary > h2::before, .detail-content--secondary > h3::before, .detail-content--secondary > h4::before, .detail-content--secondary > h5::before, .detail-content--secondary > h6::before,
+.detail-content #explus-editor--secondary > h2::before,
+.detail-content #explus-editor--secondary > h3::before,
+.detail-content #explus-editor--secondary > h4::before,
+.detail-content #explus-editor--secondary > h5::before,
+.detail-content #explus-editor--secondary > h6::before {
   content: "";
   position: absolute;
   top: 5px;
@@ -2872,7 +2904,12 @@ select {
   height: 30px;
   background-color: #1955a6;
 }
-.detail-content--secondary > h2::after, .detail-content--secondary > h3::after, .detail-content--secondary > h4::after, .detail-content--secondary > h5::after, .detail-content--secondary > h6::after {
+.detail-content--secondary > h2::after, .detail-content--secondary > h3::after, .detail-content--secondary > h4::after, .detail-content--secondary > h5::after, .detail-content--secondary > h6::after,
+.detail-content #explus-editor--secondary > h2::after,
+.detail-content #explus-editor--secondary > h3::after,
+.detail-content #explus-editor--secondary > h4::after,
+.detail-content #explus-editor--secondary > h5::after,
+.detail-content #explus-editor--secondary > h6::after {
   content: "";
   position: absolute;
   top: 3px;
@@ -2882,7 +2919,9 @@ select {
   height: 30px;
   background-color: #73be44;
 }
-.detail-content--secondary ul, .detail-content--secondary p {
+.detail-content--secondary ul, .detail-content--secondary p,
+.detail-content #explus-editor--secondary ul,
+.detail-content #explus-editor--secondary p {
   margin-bottom: 20px;
 }
 
