@@ -569,3 +569,111 @@
         }
     }
 }
+
+
+// branch
+.branch-navbar-top {
+    .navbar-item {
+        padding-left: 24px;
+        border-left: 1px solid #e5e5e5;
+        position: relative;
+        &:first-child {
+            border-left: 0;
+            padding-left: 0;
+        }
+
+    }
+    .navbar-item--more{
+        &::before {
+            border-top: 5px solid #fff;
+           
+        }
+    }
+}
+
+.branch-secondary {
+    margin-top: -61px;
+    &__top {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        background-color: #EFF9FF;
+        padding: 20px;
+        flex-wrap: wrap;
+        .top-item + .top-item {
+            margin-left: 60px;
+        }
+        .top-item__icon {
+            margin-right: 10px;
+            img {
+                width: 20px;
+                height: auto;
+            }
+        }
+        .top-item__text {
+            display: inline-block;
+            color: #1955a6;
+            font-weight: 500;
+        }
+    }
+
+    &__logo {
+        border-bottom: 1px solid #A1CBE6;
+    }
+
+    &__contact {
+        margin-bottom: 40px;
+        .contact-icon {
+            img {
+                width: 22px;
+                height: auto;
+            }
+        }
+    }
+
+    &__content {
+        .content-heading  {
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        .content-item {
+
+            &.hidden {
+                .content-dropdown {
+                    display: none;
+                }
+                .content-polygon {
+                    transform: rotate(180deg);
+                }
+            }
+            
+        }
+        .content-polygon {
+            img {
+                width: 12px;
+                height: auto;
+            }
+        }
+        .content-textList {
+            p {
+                margin-bottom: 16px;
+                word-break: break-word;
+            }
+        }
+
+        .content-listLink {
+            column-gap: 140px;
+        }
+        .contact-itemLink {
+            padding: 12px 0;
+            border-bottom: 1px solid #C7E2F1;
+        }
+        .contact-itemIcon {
+            margin-top: -2px;
+            flex-shrink: 0;
+            img {
+                width: 20px;
+                height: auto;
+            }
+        }
+    }
+}
