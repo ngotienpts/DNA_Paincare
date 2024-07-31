@@ -654,9 +654,18 @@
             }
         }
         .content-textList {
-            p {
+            p,ul {
+                font-family: "Noto Serif", serif;
                 margin-bottom: 16px;
                 word-break: break-word;
+            }
+
+            ul {
+                padding-left: 30px;
+                list-style-type: disc;
+                li {
+                    margin-bottom: 10px;
+                }
             }
         }
 

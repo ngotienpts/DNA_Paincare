@@ -216,6 +216,20 @@
             padding-right: 15px;
         }
     }
+
+    .introduce-detail-pro {
+        &__left {
+            .article-top {
+                display: block;
+
+                .article-img {
+                    width: 100%;
+                }
+
+                
+            }
+        }
+    }
 }
 
 // max width 992px
@@ -252,6 +266,7 @@
     }
     // --------------------------------------------------------------------cate
     // --------------------------------------------------------------------detail
+   
     // --------------------------------------------------------------------footer
 }
 // max width 768px
@@ -411,6 +426,18 @@
 
             .right {
                 margin: 20px auto 0;
+            }
+        }
+    }
+
+    .branch-secondary {
+        &__top {
+            padding-bottom: 10px;
+            .top-item + .top-item {
+                margin-left: 30px;
+            }
+            .top-item {
+                margin-bottom: 10px;
             }
         }
     }
@@ -1024,6 +1051,38 @@
             width: 50%;
         }
     }
+    .branch-secondary {
+        margin-top: -100px;
+        &__top {
+            padding-bottom: 0;
+             .top-item {
+                margin-bottom: 20px;
+                &:last-child {
+                    margin-left: 0 !important;
+                }
+            }
+            .top-item + .top-item {
+                margin-left: 20px;
+            }
+
+        }
+
+        &__logo {
+            &--text {
+                .title {
+                    font-size: 32px;
+                    line-height: 100%;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+
+        &__content {
+            .content-listLink {
+                display: block;
+            }
+        }
+    }
     // --------------------------------------------------------------------detail
     .detail-navbar {
         &__container {
@@ -1291,6 +1350,43 @@
                 }
             }
         }
+    }
+     .introduce-detail-pro-secondary {
+        padding-left: 0;
+        padding-right: 0;
+        margin-top: 0;
+        &__container {
+            display: block;
+        }
+        .introduce-detail-pro__left {
+            width: 100%;
+            padding: 10px 15px 20px;
+
+            .article-title-1 {
+                margin-right: 10px;
+                display: inline-block;
+            }
+            .article-title-2 {
+                display: inline;
+            }   
+            .article-content {
+                padding: 20px 0 10px;
+            }
+
+            .footer-fixed__booking {
+                display: inline-flex;
+            }
+
+            .detail-content {
+                margin-top: 20px;
+            }
+        }
+
+        .introduce-detail-pro__right {
+            width: 100%;
+            padding: 30px 15px 20px; 
+        }
+
     }
     // --------------------------------------------------------------------footer
     .footer {

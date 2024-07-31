@@ -21,6 +21,8 @@ document.addEventListener("DOMContentLoaded", function () {
         ".js__scrollTabContainer"
     );
 
+    const contentItemBranchMores = document.querySelectorAll('.js__contentItemBranchMore')
+
     // Xử lý sự kiện khi nhấn nút "back to top"
     function handleBackTop() {
         if (backTop) {
@@ -227,6 +229,18 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
+    // Xử lý hiện thị content branch more
+    function handleContentBranchMore () {
+        if(! contentItemBranchMores) return 
+
+        contentItemBranchMores.forEach((contentItemBranchMore)=>{
+            var contentHeading =  contentItemBranchMore.querySelector('.js__contentItemBranchMoreHeading')
+
+            contentHeading.onclick = function() {
+                contentItemBranchMore.classList.toggle('hidden')
+            }
+        })
+    }
 
     function setEqualHeightForSwiperSlides(slider) {
         var slides = slider.querySelectorAll('.swiper-slide');
@@ -508,6 +522,7 @@ document.addEventListener("DOMContentLoaded", function () {
         initSliderGalleryTabItem();
         initSliderGalleryVertical();
         handleWindowScroll();
+        handleContentBranchMore();
     }
 
     // Bắt đầu khởi tạo ứng dụng
